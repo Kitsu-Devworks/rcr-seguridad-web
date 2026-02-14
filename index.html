@@ -17,7 +17,8 @@
                     },
                     animation: {
                         'slow-pan': 'pan 30s linear infinite',
-                        'carousel-slide': 'slide 10s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+                        /* CAMBIADO A 15s TOTALES */
+                        'carousel-slide': 'slide 15s infinite cubic-bezier(0.4, 0, 0.2, 1)',
                     },
                     keyframes: {
                         pan: {
@@ -26,12 +27,12 @@
                             '100%': { transform: 'scale(1) translateX(0)' },
                         },
                         slide: {
-                            /* Cada foto dura 2s (20% de 10s). Se queda quieta el 15% y se mueve en el 5% restante */
-                            '0%, 15%': { transform: 'translateX(0)' },
-                            '20%, 35%': { transform: 'translateX(-20%)' },
-                            '40%, 55%': { transform: 'translateX(-40%)' },
-                            '60%, 75%': { transform: 'translateX(-60%)' },
-                            '80%, 100%': { transform: 'translateX(-80%)' },
+                            /* AJUSTADO PARA 3 SEGUNDOS POR IMAGEN */
+                            '0%, 16%': { transform: 'translateX(0)' },       /* Foto 1 */
+                            '20%, 36%': { transform: 'translateX(-20%)' },   /* Foto 2 */
+                            '40%, 56%': { transform: 'translateX(-40%)' },   /* Foto 3 */
+                            '60%, 76%': { transform: 'translateX(-60%)' },   /* Foto 4 */
+                            '80%, 100%': { transform: 'translateX(-80%)' },  /* Foto 1 (Repetida) */
                         }
                     }
                 }
@@ -52,17 +53,16 @@
         @keyframes shimmer { to { background-position: 200% center; } }
         .bg-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(181, 148, 88, 0.05) 1px, transparent 0); background-size: 40px 40px; }
         
-        /* Estilo para las fotos con el borde dorado exigido */
         .carousel-photo {
             width: 20%;
             min-width: 20%;
             flex-shrink: 0;
             display: block;
             box-sizing: border-box;
-            border: 8px solid #b59458; /* Borde dorado elegante */
+            border: 8px solid #b59458;
             border-radius: 1.5rem;
             object-fit: cover;
-            padding: 2px; /* Espacio extra para que el borde luzca mejor */
+            padding: 2px;
         }
     </style>
 </head>
@@ -76,7 +76,6 @@
                     <img src="logo.png" alt="RCR" class="h-full w-full object-cover">
                 </div>
             </div>
-            
             <div class="flex items-center space-x-6 md:space-x-10 text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold">
                 <a href="#quienes-somos" class="hover:text-rcr-gold transition-all">Quienes somos</a>
                 <a href="#servicios" class="hidden sm:inline hover:text-rcr-gold transition-all">Servicios</a>
@@ -91,7 +90,6 @@
             <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2000" class="w-full h-full object-cover opacity-20 animate-slow-pan grayscale">
             <div class="absolute inset-0 bg-gradient-to-b from-rcr-dark via-transparent to-rcr-dark"></div>
         </div>
-
         <div class="relative z-10 px-6 w-full max-w-6xl">
             <div class="mb-6 inline-block">
                 <span class="px-4 py-1 border border-rcr-gold/40 rounded-full text-[10px] tracking-[0.5em] text-rcr-gold uppercase font-bold">Estándar de Excelencia</span>
@@ -115,20 +113,67 @@
                         <span class="block text-3xl md:text-5xl font-black text-rcr-gold italic uppercase">OS10</span>
                         <span class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-2">Expertos</span>
                     </div>
+                    <div class="text-center p-6 border border-white/5 rounded-2xl bg-black/40 backdrop-blur-sm">
+                        <span class="block text-3xl md:text-5xl font-black text-rcr-gold italic uppercase">100%</span>
+                        <span class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-2">Lealtad</span>
+                    </div>
+                    <div class="text-center p-6 border border-white/5 rounded-2xl bg-black/40 backdrop-blur-sm">
+                        <span class="block text-3xl md:text-5xl font-black text-rcr-gold italic uppercase">SPA</span>
+                        <span class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-2">Sociedad</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <section id="servicios" class="py-32 relative bg-rcr-gray/30 px-6 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div class="text-left max-w-xl">
+                    <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Nuestra Expertise</h2>
+                    <h3 class="text-4xl md:text-6xl font-black italic uppercase leading-none">Servicios de <br><span class="text-rcr-gold">Alto Impacto</span></h3>
+                </div>
+                <p class="text-gray-500 text-sm max-w-xs text-left border-l border-rcr-gold/30 pl-6 italic">Soluciones tácticas diseñadas para la protección de activos críticos.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden bg-rcr-dark p-12 border border-white/5 hover:border-rcr-gold/40 transition-all rounded-2xl text-left">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black">01</div>
+                    <i class="fas fa-user-shield text-4xl text-rcr-gold mb-8 inline-block"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Guardias de Elite</h4>
+                    <p class="text-gray-500 text-sm">Personal certificado OS10 bajo régimen de disciplina militar.</p>
+                </div>
+                <div class="group relative overflow-hidden bg-rcr-dark p-12 border border-white/5 hover:border-rcr-gold/40 transition-all rounded-2xl text-left">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black">02</div>
+                    <i class="fas fa-satellite-dish text-4xl text-rcr-gold mb-8 inline-block"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Sistemas CCTV</h4>
+                    <p class="text-gray-500 text-sm">Monitoreo con analítica avanzada para prevención inmediata.</p>
+                </div>
+                <div class="group relative overflow-hidden bg-rcr-dark p-12 border border-white/5 hover:border-rcr-gold/40 transition-all rounded-2xl text-left">
+                    <div class="absolute -right-4 -top-4 text-9xl text-white/5 font-black">03</div>
+                    <i class="fas fa-bolt text-4xl text-rcr-gold mb-8 inline-block"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Respuesta Rápida</h4>
+                    <p class="text-gray-500 text-sm">Protocolos de emergencia y apoyo móvil constante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="reclutamiento" class="py-32 px-6">
         <div class="max-w-6xl mx-auto glass rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row shadow-2xl border border-white/10">
             <div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center text-left">
                 <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-6">Postula en RCR</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-8 uppercase italic leading-tight text-white">¿Tienes lo que se necesita?</h3>
-                <p class="text-gray-400 mb-10 text-lg font-light italic">Buscamos especialistas en seguridad con vocación de servicio. Ofrecemos formación y un entorno de alto rendimiento.</p>
-                <a href="https://wa.me/56999158787" class="gold-gradient text-black px-10 py-5 font-black uppercase text-xs tracking-widest hover:brightness-110 transition shadow-lg text-center rounded-xl">Postular Vía WhatsApp</a>
+                <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic leading-tight text-white">¿Tienes lo que se necesita?</h3>
+                <p class="text-gray-400 mb-10 text-lg font-light italic">Buscamos especialistas en seguridad con vocación de servicio. Envíanos tu información por el medio que prefieras.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/56999158787" class="gold-gradient text-black px-8 py-5 font-black uppercase text-[10px] tracking-widest hover:brightness-110 transition shadow-lg text-center rounded-xl flex-1 flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Postular WhatsApp
+                    </a>
+                    <a href="mailto:rcr.seguridad@gmail.com?subject=Postulacion%20Laboral%20-%20Envio%20de%20CV" class="bg-transparent border border-rcr-gold text-rcr-gold px-8 py-5 font-black uppercase text-[10px] tracking-widest hover:bg-rcr-gold hover:text-black transition shadow-lg text-center rounded-xl flex-1 flex items-center justify-center gap-2">
+                        <i class="far fa-file-pdf text-lg"></i> Enviar CV
+                    </a>
+                </div>
             </div>
-
             <div class="md:w-1/2 bg-black relative overflow-hidden min-h-[450px] flex items-center justify-center p-6">
                 <div class="w-full h-full overflow-hidden rounded-3xl relative">
                     <div class="flex h-full w-[500%] animate-carousel-slide">
@@ -150,7 +195,7 @@
                 <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-4">Solicitar <span class="text-rcr-gold">Protección</span></h2>
                 <div class="h-1 w-20 gold-gradient mx-auto"></div>
             </div>
-            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 bg-rcr-gray/50 p-8 md:p-14 border border-white/10 rounded-3xl text-left">
+            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-rcr-gray/50 p-8 md:p-14 border border-white/10 rounded-3xl text-left">
                 <div class="flex flex-col gap-3">
                     <label class="text-[9px] uppercase tracking-[0.4em] text-rcr-gold font-bold">Identificación</label>
                     <input type="text" name="nombre" placeholder="Nombre o Empresa" class="bg-black/50 border border-white/10 p-4 rounded-xl focus:border-rcr-gold outline-none text-xs" required>
@@ -163,7 +208,7 @@
                     <label class="text-[9px] uppercase tracking-[0.4em] text-rcr-gold font-bold">Asunto Estratégico</label>
                     <textarea name="mensaje" placeholder="Describa su requerimiento..." class="bg-black/50 border border-white/10 p-4 rounded-xl focus:border-rcr-gold outline-none text-xs h-40" required></textarea>
                 </div>
-                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-6 rounded-xl uppercase tracking-[0.5em] text-xs hover:scale-[1.01] transition-all">
+                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-6 rounded-xl uppercase tracking-[0.5em] text-xs hover:scale-[1.01] transition-all shadow-2xl">
                     Enviar Requerimiento
                 </button>
             </form>
@@ -172,10 +217,14 @@
 
     <footer class="py-20 border-t border-white/5 bg-rcr-dark px-6 text-center">
         <h4 class="text-rcr-gold font-black italic text-3xl mb-4 tracking-tighter">RCR</h4>
-        <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA | Chile</p>
+        <div class="flex justify-center space-x-8 mb-8 text-gray-500">
+            <a href="https://wa.me/56999158787" class="hover:text-rcr-gold transition"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="mailto:rcr.seguridad@gmail.com" class="hover:text-rcr-gold transition"><i class="far fa-envelope text-xl"></i></a>
+        </div>
+        <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA | Villa Alemana, Chile</p>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl shadow-xl z-50">
+    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl shadow-2xl z-50">
         <i class="fab fa-whatsapp"></i>
     </a>
 
