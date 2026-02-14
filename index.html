@@ -18,7 +18,7 @@
                     animation: {
                         'slow-pan': 'pan 30s linear infinite',
                         'carousel-slide': 'slide 15s infinite cubic-bezier(0.4, 0, 0.2, 1)',
-                        'pulse-gold': 'pulse-gold 2s infinite',
+                        'pulse-gold-infinite': 'pulse-gold 2s infinite',
                     },
                     keyframes: {
                         pan: {
@@ -35,7 +35,7 @@
                         },
                         'pulse-gold': {
                             '0%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0.7)' },
-                            '70%': { boxShadow: '0 0 0 15px rgba(181, 148, 88, 0)' },
+                            '70%': { boxShadow: '0 0 0 20px rgba(181, 148, 88, 0)' },
                             '100%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0)' },
                         }
                     }
@@ -58,21 +58,14 @@
         .bg-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(181, 148, 88, 0.05) 1px, transparent 0); background-size: 40px 40px; }
         
         .carousel-photo {
-            width: 20%;
-            min-width: 20%;
-            flex-shrink: 0;
-            display: block;
-            box-sizing: border-box;
-            border: 8px solid #b59458;
-            border-radius: 1.5rem;
-            object-fit: cover;
-            padding: 2px;
+            width: 20%; min-width: 20%; flex-shrink: 0;
+            display: block; box-sizing: border-box;
+            border: 8px solid #b59458; border-radius: 1.5rem;
+            object-fit: cover; padding: 2px;
         }
 
-        /* Clase específica para asegurar que el pulso se vea bien */
-        .whatsapp-pulse {
-            animation: pulse-gold 2s infinite;
-        }
+        /* Estilo para que el mapa se vea oscuro y elegante */
+        .map-dark { filter: grayscale(1) invert(0.92) contrast(1.2); }
     </style>
 </head>
 <body class="bg-rcr-dark text-white font-sans antialiased bg-pattern text-center">
@@ -184,7 +177,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 bg-black relative overflow-hidden min-h-[450px] flex items-center justify-center p-6">
-                <div class="w-full h-full overflow-hidden rounded-3xl relative border border-rcr-gold/20">
+                <div class="w-full h-full overflow-hidden rounded-3xl relative">
                     <div class="flex h-full w-[500%] animate-carousel-slide">
                         <img src="foto1.png" alt="RCR 1" class="carousel-photo">
                         <img src="foto2.png" alt="RCR 2" class="carousel-photo">
@@ -192,6 +185,27 @@
                         <img src="foto4.png" alt="RCR 4" class="carousel-photo">
                         <img src="foto1.png" alt="RCR 1" class="carousel-photo">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-4">Centro Operativo</h2>
+                <h3 class="text-4xl md:text-5xl font-black uppercase italic leading-tight text-white">Nuestra Casa Central</h3>
+            </div>
+            <div class="glass p-4 rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 h-[450px] relative">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.568474269926!2d-71.3768224!3d-33.0285652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d9703f569769%3A0xc665780d6f22e70!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" 
+                    class="w-full h-full rounded-[2rem] map-dark" 
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <div class="absolute bottom-8 left-8 right-8 md:right-auto glass p-6 rounded-2xl border-l-4 border-rcr-gold max-w-sm text-left backdrop-blur-md">
+                    <p class="text-rcr-gold font-bold text-[10px] uppercase tracking-widest mb-1">Dirección</p>
+                    <p class="text-white font-bold text-sm">Calle Buenos Aires 1140, Oficina A2</p>
+                    <p class="text-gray-400 text-xs">Villa Alemana, Chile</p>
                 </div>
             </div>
         </div>
@@ -225,7 +239,7 @@
     </section>
 
     <footer class="py-20 border-t border-white/5 bg-rcr-dark px-6 text-center">
-        <h4 class="text-rcr-gold font-black italic text-3xl mb-4 tracking-tighter text-center w-full">RCR</h4>
+        <h4 class="text-rcr-gold font-black italic text-3xl mb-4 tracking-tighter">RCR</h4>
         <div class="flex justify-center space-x-8 mb-8 text-gray-500">
             <a href="https://wa.me/56999158787" class="hover:text-rcr-gold transition"><i class="fab fa-whatsapp text-xl"></i></a>
             <a href="mailto:rcr.seguridad@gmail.com" class="hover:text-rcr-gold transition"><i class="far fa-envelope text-xl"></i></a>
@@ -233,7 +247,7 @@
         <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA | Villa Alemana, Chile</p>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl shadow-2xl z-50 whatsapp-pulse">
+    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl shadow-xl z-50 animate-pulse-gold-infinite">
         <i class="fab fa-whatsapp"></i>
     </a>
 
