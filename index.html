@@ -35,7 +35,7 @@
                         },
                         'pulse-gold': {
                             '0%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0.7)' },
-                            '70%': { boxShadow: '0 0 0 20px rgba(181, 148, 88, 0)' },
+                            '70%': { boxShadow: '0 0 0 15px rgba(181, 148, 88, 0)' },
                             '100%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0)' },
                         }
                     }
@@ -69,8 +69,8 @@
             padding: 2px;
         }
 
-        /* Animación extra para el botón flotante */
-        .btn-float-wa {
+        /* Clase específica para asegurar que el pulso se vea bien */
+        .whatsapp-pulse {
             animation: pulse-gold 2s infinite;
         }
     </style>
@@ -184,7 +184,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 bg-black relative overflow-hidden min-h-[450px] flex items-center justify-center p-6">
-                <div class="w-full h-full overflow-hidden rounded-3xl relative">
+                <div class="w-full h-full overflow-hidden rounded-3xl relative border border-rcr-gold/20">
                     <div class="flex h-full w-[500%] animate-carousel-slide">
                         <img src="foto1.png" alt="RCR 1" class="carousel-photo">
                         <img src="foto2.png" alt="RCR 2" class="carousel-photo">
@@ -225,7 +225,7 @@
     </section>
 
     <footer class="py-20 border-t border-white/5 bg-rcr-dark px-6 text-center">
-        <h4 class="text-rcr-gold font-black italic text-3xl mb-4 tracking-tighter">RCR</h4>
+        <h4 class="text-rcr-gold font-black italic text-3xl mb-4 tracking-tighter text-center w-full">RCR</h4>
         <div class="flex justify-center space-x-8 mb-8 text-gray-500">
             <a href="https://wa.me/56999158787" class="hover:text-rcr-gold transition"><i class="fab fa-whatsapp text-xl"></i></a>
             <a href="mailto:rcr.seguridad@gmail.com" class="hover:text-rcr-gold transition"><i class="far fa-envelope text-xl"></i></a>
@@ -233,7 +233,7 @@
         <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA | Villa Alemana, Chile</p>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl shadow-2xl z-50 btn-float-wa">
+    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl shadow-2xl z-50 whatsapp-pulse">
         <i class="fab fa-whatsapp"></i>
     </a>
 
