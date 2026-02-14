@@ -17,12 +17,6 @@
                     },
                     animation: {
                         'shimmer': 'shimmer 3s linear infinite',
-                    },
-                    keyframes: {
-                        shimmer: {
-                            '0%': { backgroundPosition: '-200% 0' },
-                            '100%': { backgroundPosition: '200% 0' },
-                        }
                     }
                 }
             }
@@ -40,9 +34,9 @@
         .bg-carbon { background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
     </style>
 </head>
-<body class="bg-rcr-dark text-white font-sans antialiased bg-carbon">
+<body class="bg-rcr-dark text-white font-sans antialiased bg-carbon text-center">
 
-    <nav class="fixed w-full z-50 bg-black/90 border-b border-rcr-gold/20 backdrop-blur-md">
+    <nav class="fixed w-full z-50 bg-black/95 border-b border-rcr-gold/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             
             <div class="relative group">
@@ -66,13 +60,11 @@
              <img src="logo.png" class="w-[50%] h-auto rotate-12">
         </div>
         
-        <div class="relative z-10 text-center px-6 pt-20">
+        <div class="relative z-10 px-6 pt-20">
             <h2 class="text-rcr-gold font-bold tracking-[0.6em] uppercase text-xs mb-6 opacity-80">Presentación Oficial</h2>
-            
             <h1 class="text-9xl md:text-[15rem] font-black mb-0 tracking-tighter leading-none text-white drop-shadow-[0_10px_30px_rgba(181,148,88,0.2)]">
                 RCR
             </h1>
-            
             <p class="text-shimmer text-2xl md:text-5xl font-light italic mb-12 tracking-[0.3em] uppercase">
                 Seguridad Privada
             </p>
@@ -80,7 +72,7 @@
             <div class="max-w-3xl mx-auto bg-black/40 p-8 border-y border-rcr-gold/20 backdrop-blur-sm">
                 <h3 class="text-xl font-bold mb-4 text-rcr-gold uppercase tracking-[0.4em]">Quiénes Somos</h3>
                 <p class="text-gray-300 text-lg leading-relaxed italic font-light">
-                    "En <span class="text-white font-bold">RCR Seguridad Privada SpA</span> somos expertos en la gestión de riesgo y protección de activos. Nos especializamos en el reclutamiento de personal táctico y su despliegue bajo los más altos estándares de disciplina y tecnología."
+                    "En <span class="text-white font-bold">RCR Seguridad Privada SpA</span> somos expertos en la gestión de riesgo y protección de activos. Nos especializamos en el reclutamiento de personal táctico y su despliegue bajo los más altos estándares de disciplina."
                 </p>
             </div>
         </div>
@@ -88,30 +80,30 @@
 
     <section id="servicios" class="py-24 bg-rcr-gray px-6 border-y border-white/5">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 text-center md:text-left">
-                <div class="border-l-2 border-rcr-gold pl-6 group">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="border-l-2 border-rcr-gold pl-6 text-left group">
                     <i class="fas fa-shield-halved text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition inline-block"></i>
                     <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Vigilancia Física</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Guardias certificados OS10 con entrenamiento especializado en recintos industriales y eventos masivos.</p>
+                    <p class="text-gray-500 text-sm">Personal certificado OS10 con entrenamiento especializado.</p>
                 </div>
-                <div class="border-l-2 border-rcr-gold pl-6 group border-white/10">
+                <div class="border-l-2 border-rcr-gold pl-6 text-left group border-white/10">
                     <i class="fas fa-eye text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition inline-block"></i>
                     <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Monitoreo 24/7</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Central de operaciones avanzada para vigilancia remota y respuesta táctica inmediata.</p>
+                    <p class="text-gray-500 text-sm">Vigilancia remota y respuesta táctica inmediata.</p>
                 </div>
-                <div class="border-l-2 border-rcr-gold pl-6 group border-white/10">
+                <div class="border-l-2 border-rcr-gold pl-6 text-left group border-white/10">
                     <i class="fas fa-helicopter text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition inline-block"></i>
                     <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Tecnología Drone</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Patrullaje aéreo preventivo para perímetros críticos y activos de gran extensión.</p>
+                    <p class="text-gray-500 text-sm">Patrullaje aéreo para perímetros críticos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reclutamiento" class="py-24 px-6 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center border border-rcr-gold/20 bg-black/40 p-12 backdrop-blur-sm">
+    <section id="reclutamiento" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto border border-rcr-gold/20 bg-black/40 p-12 backdrop-blur-sm">
             <h2 class="text-4xl font-black mb-6 italic uppercase tracking-tighter">Únete al equipo</h2>
-            <p class="text-gray-400 mb-12 italic text-lg">Buscamos profesionales comprometidos con la disciplina. Postula hoy mismo.</p>
+            <p class="text-gray-400 mb-12 italic">Buscamos profesionales comprometidos. Postula hoy mismo.</p>
             <div class="grid md:grid-cols-2 gap-4 font-black tracking-widest uppercase text-xs">
                 <a href="mailto:rcr.seguridad@gmail.com" class="border border-rcr-gold text-rcr-gold py-5 px-8 hover:bg-rcr-gold hover:text-black transition">Enviar Curriculum</a>
                 <a href="https://wa.me/56999158787" class="bg-white text-black py-5 px-8 hover:bg-gray-200 transition">Postular WhatsApp</a>
@@ -119,25 +111,38 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-24 px-6">
+    <section id="contacto" class="py-24 px-6 bg-black/50">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-widest text-rcr-gold drop-shadow-sm">Solicitar Servicios</h2>
-            <form class="grid md:grid-cols-2 gap-8 bg-rcr-gray/30 p-10 rounded-sm border border-white/5">
-                <input type="text" placeholder="NOMBRE COMPLETO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest">
-                <input type="email" placeholder="CORREO ELECTRÓNICO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest">
-                <textarea placeholder="DETALLES DEL SERVICIO REQUERIDO" class="md:col-span-2 bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest h-32"></textarea>
-                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 uppercase tracking-[0.4em] hover:scale-[1.02] transition shadow-2xl">
+            <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-widest text-rcr-gold">Solicitar Servicios</h2>
+            
+            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid md:grid-cols-2 gap-8 bg-rcr-gray/30 p-10 border border-white/5">
+                
+                <div class="flex flex-col gap-2 text-left">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="NOMBRE" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest" required>
+                </div>
+
+                <div class="flex flex-col gap-2 text-left">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="CORREO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest" required>
+                </div>
+
+                <div class="md:col-span-2 flex flex-col gap-2 text-left">
+                    <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Detalles del Servicio</label>
+                    <textarea name="mensaje" placeholder="DESCRIPCIÓN DEL REQUERIMIENTO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest h-32" required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="Nueva Solicitud Web - RCR">
+
+                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 uppercase tracking-[0.4em] hover:scale-[1.02] transition">
                     Enviar Requerimiento
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-[10px] text-gray-600 uppercase tracking-[0.5em] border-t border-white/5">
-        <div class="h-10 w-10 rounded-full border border-gray-800 overflow-hidden mx-auto mb-6 grayscale opacity-30">
-            <img src="logo.png" alt="RCR" class="h-full w-full object-cover">
-        </div>
-        © 2026 RCR Seguridad Privada SpA | Santiago, Chile
+    <footer class="py-12 border-t border-white/5">
+        <p class="text-[10px] text-gray-600 uppercase tracking-[0.5em]">© 2026 RCR Seguridad Privada SpA | Santiago, Chile</p>
     </footer>
 
     <a href="https://wa.me/56999158787" class="fixed bottom-8 right-8 gold-gradient text-black w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-[0_0_30px_rgba(181,148,88,0.4)] z-50 hover:scale-110 transition">
