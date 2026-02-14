@@ -17,12 +17,21 @@
                     },
                     animation: {
                         'slow-pan': 'pan 30s linear infinite',
+                        'carousel-slide': 'slide 10s infinite ease-in-out',
                     },
                     keyframes: {
                         pan: {
                             '0%': { transform: 'scale(1) translateX(0)' },
                             '50%': { transform: 'scale(1.1) translateX(-2%)' },
                             '100%': { transform: 'scale(1) translateX(0)' },
+                        },
+                        slide: {
+                            '0%': { transform: 'translateX(0)' },
+                            '20%': { transform: 'translateX(-20%)' },
+                            '40%': { transform: 'translateX(-40%)' },
+                            '60%': { transform: 'translateX(-60%)' },
+                            '80%': { transform: 'translateX(-80%)' },
+                            '100%': { transform: 'translateX(-80%)' },
                         }
                     }
                 }
@@ -42,6 +51,15 @@
         }
         @keyframes shimmer { to { background-position: 200% center; } }
         .bg-pattern { background-image: radial-gradient(circle at 2px 2px, rgba(181, 148, 88, 0.05) 1px, transparent 0); background-size: 40px 40px; }
+        
+        /* Estilo específico para las fotos del carrusel */
+        .carousel-photo {
+            width: 20%;
+            box-sizing: border-box;
+            border: 6px solid #b59458; /* Margen dorado elegante */
+            border-radius: 1.5rem;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="bg-rcr-dark text-white font-sans antialiased bg-pattern text-center">
@@ -143,16 +161,27 @@
 
     <section id="reclutamiento" class="py-32 px-6">
         <div class="max-w-6xl mx-auto glass rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row shadow-2xl border border-white/10">
+            
             <div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center text-left">
                 <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-6">Postula en RCR</h2>
                 <h3 class="text-4xl md:text-5xl font-black mb-8 uppercase italic leading-tight text-white">¿Tienes lo que se necesita?</h3>
                 <p class="text-gray-400 mb-10 text-lg font-light italic">Buscamos especialistas en seguridad con vocación de servicio. Ofrecemos formación y un entorno de alto rendimiento.</p>
                 <a href="https://wa.me/56999158787" class="gold-gradient text-black px-10 py-5 font-black uppercase text-xs tracking-widest hover:brightness-110 transition shadow-lg text-center rounded-xl">Postular Vía WhatsApp</a>
             </div>
-            <div class="md:w-1/2 bg-black relative group overflow-hidden min-h-[400px]">
-                <img src="https://images.unsplash.com/photo-1590483736622-39da8caf3501?q=80&w=1000" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-[3s]">
-                <div class="absolute inset-0 bg-gradient-to-r from-rcr-dark to-transparent"></div>
+
+            <div class="md:w-1/2 bg-black relative overflow-hidden min-h-[450px] flex items-center justify-center p-4">
+                <div class="w-full h-full overflow-hidden rounded-3xl relative">
+                    <div class="flex h-full w-[500%] animate-carousel-slide">
+                        <img src="foto1.png" alt="RCR Elite 1" class="carousel-photo">
+                        <img src="foto2.png" alt="RCR Elite 2" class="carousel-photo">
+                        <img src="foto3.png" alt="RCR Elite 3" class="carousel-photo">
+                        <img src="foto4.png" alt="RCR Elite 4" class="carousel-photo">
+                        <img src="foto1.png" alt="RCR Elite 1" class="carousel-photo">
+                    </div>
+                    <div class="absolute inset-0 pointer-events-none bg-gradient-to-r from-rcr-dark/40 via-transparent to-rcr-dark/40"></div>
+                </div>
             </div>
+
         </div>
     </section>
 
