@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCR Seguridad Privada SpA | Excelencia en Protección</title>
+    <title>RCR Seguridad Privada SpA | Protección de Elite</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
@@ -13,58 +13,126 @@
                     colors: {
                         'rcr-gold': '#b59458',
                         'rcr-dark': '#0a0a0a',
-                        'rcr-gray': '#1a1a1a',
+                        'rcr-gray': '#111111',
+                    },
+                    animation: {
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #0a0a0a; color: white; }
         .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #ffedbb 50%, #b59458 100%); }
-        .bg-pattern { background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
+        .text-shimmer {
+            background: linear-gradient(90deg, #b59458, #ffffff, #b59458);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+        .bg-carbon { background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
     </style>
 </head>
-<body class="font-sans antialiased bg-pattern">
+<body class="bg-rcr-dark text-white font-sans antialiased bg-carbon">
 
-    <nav class="bg-black/95 border-b border-rcr-gold/30 sticky top-0 z-50 backdrop-blur-md">
+    <nav class="fixed w-full z-50 bg-black/90 border-b border-rcr-gold/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <img src="logo.png" alt="Logo RCR" class="h-14 w-auto">
+                <img src="logo.png" alt="RCR Logo" class="h-12 w-auto">
                 <div class="flex flex-col leading-none">
                     <span class="text-3xl font-black tracking-tighter text-rcr-gold italic">RCR</span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">Seguridad Privada</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">Seguridad Privada</span>
                 </div>
             </div>
-            <div class="hidden md:flex space-x-6 text-[10px] uppercase tracking-widest font-bold text-gray-300">
+            <div class="hidden md:flex space-x-8 text-[11px] uppercase tracking-[0.3em] font-bold">
                 <a href="#quienes-somos" class="hover:text-rcr-gold transition">Quiénes Somos</a>
                 <a href="#servicios" class="hover:text-rcr-gold transition">Servicios</a>
-                <a href="#contacto" class="hover:text-rcr-gold transition text-rcr-gold border border-rcr-gold/50 px-3 py-1 rounded">Solicitar Guardias</a>
+                <a href="#reclutamiento" class="hover:text-rcr-gold transition">Reclutamiento</a>
+                <a href="#contacto" class="gold-gradient text-black px-4 py-2 rounded-sm hover:scale-105 transition">Solicitar Guardias</a>
             </div>
         </div>
     </nav>
 
-    <header id="quienes-somos" class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-rcr-gold/10">
-        <div class="absolute inset-0 opacity-30">
-            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000" class="w-full h-full object-cover grayscale">
-            <div class="absolute inset-0 bg-gradient-to-b from-rcr-dark via-transparent to-rcr-dark"></div>
+    <header id="quienes-somos" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2000" class="w-full h-full object-cover opacity-30 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-rcr-dark via-transparent to-rcr-dark"></div>
         </div>
         
         <div class="relative z-10 text-center px-6">
-            <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-xs mb-4">Presentación Oficial</h2>
-            <h1 class="text-8xl md:text-[12rem] font-black mb-0 tracking-tighter text-white leading-none">RCR</h1>
-            <p class="text-rcr-gold text-2xl md:text-4xl font-light italic mb-12 tracking-[0.2em] uppercase">Seguridad Privada SpA</p>
+            <h2 class="text-rcr-gold font-bold tracking-[0.6em] uppercase text-sm mb-6">Presentación Oficial</h2>
+            <h1 class="text-8xl md:text-[13rem] font-black mb-0 tracking-tighter leading-none text-white">RCR</h1>
+            <p class="text-shimmer text-2xl md:text-5xl font-light italic mb-12 tracking-widest uppercase">Seguridad Privada SpA</p>
             
-            <div class="max-w-3xl mx-auto bg-black/80 p-8 border-l-4 border-rcr-gold backdrop-blur-sm shadow-2xl">
-                <h3 class="text-xl font-bold mb-4 text-white uppercase tracking-widest flex items-center gap-3">
-                    <i class="fas fa-shield-alt text-rcr-gold"></i> Quiénes Somos
-                </h3>
-                <p class="text-gray-300 leading-relaxed text-lg italic text-left">
-                    "Especialistas en reclutamiento y despliegue de personal táctico. En <span class="text-white font-bold text-rcr-gold">RCR</span>, nos dedicamos a la protección de instalaciones industriales, eventos masivos y seguridad corporativa, combinando disciplina militar con tecnología de vigilancia avanzada."
+            <div class="max-w-3xl mx-auto bg-black/60 p-8 border border-rcr-gold/30 backdrop-blur-md">
+                <h3 class="text-2xl font-bold mb-4 text-white uppercase tracking-widest">Quiénes Somos</h3>
+                <p class="text-gray-300 text-lg leading-relaxed italic">
+                    "En <span class="text-white font-bold">RCR Seguridad</span> somos expertos en la gestión de riesgo y protección de activos. Nos especializamos en el reclutamiento de personal táctico y su despliegue en instalaciones industriales y eventos masivos, bajo los más altos estándares de disciplina."
                 </p>
             </div>
         </div>
     </header>
 
-    <section id="servicios" class="py-24 bg-rcr-gray/50">
-        <div class
+    <section id="servicios" class="py-24 bg-rcr-gray px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="border-l-2 border-rcr-gold pl-6">
+                    <i class="fas fa-shield-halved text-3xl text-rcr-gold mb-4"></i>
+                    <h4 class="text-xl font-bold uppercase mb-2">Vigilancia Física</h4>
+                    <p class="text-gray-500 text-sm">Guardias certificados OS10 con entrenamiento en control de crisis y defensa.</p>
+                </div>
+                <div class="border-l-2 border-rcr-gold pl-6">
+                    <i class="fas fa-eye text-3xl text-rcr-gold mb-4"></i>
+                    <h4 class="text-xl font-bold uppercase mb-2">Monitoreo 24/7</h4>
+                    <p class="text-gray-500 text-sm">Sistemas avanzados de CCTV y respuesta inmediata ante intrusiones.</p>
+                </div>
+                <div class="border-l-2 border-rcr-gold pl-6">
+                    <i class="fas fa-drone text-3xl text-rcr-gold mb-4"></i>
+                    <h4 class="text-xl font-bold uppercase mb-2">Seguridad Aérea</h4>
+                    <p class="text-gray-500 text-sm">Patrullaje preventivo con drones en recintos de gran extensión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reclutamiento" class="py-24 px-6 border-y border-rcr-gold/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-6 italic uppercase">Trabaja con nosotros</h2>
+            <p class="text-gray-400 mb-12 italic">Buscamos hombres y mujeres comprometidos con la seguridad y la disciplina. Únete al equipo RCR.</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="mailto:rcr.seguridad@gmail.com" class="border border-rcr-gold text-rcr-gold py-4 px-8 font-bold uppercase hover:bg-rcr-gold hover:text-black transition">Enviar CV</a>
+                <a href="https://wa.me/56999158787" class="bg-white text-black py-4 px-8 font-bold uppercase hover:bg-gray-200 transition">Postular por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto bg-black border border-rcr-gold/20 p-12">
+            <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-widest text-rcr-gold">Solicitar Servicios</h2>
+            <form class="grid md:grid-cols-2 gap-8">
+                <input type="text" placeholder="NOMBRE COMPLETO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-sm">
+                <input type="email" placeholder="CORREO ELECTRÓNICO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-sm">
+                <textarea placeholder="DETALLES DEL SERVICIO REQUERIDO" class="md:col-span-2 bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-sm h-32"></textarea>
+                <button class="md:col-span-2 gold-gradient text-black font-black py-4 uppercase tracking-[0.3em] hover:scale-105 transition">Enviar Requerimiento</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em]">
+        <img src="logo.png" alt="RCR" class="h-8 mx-auto mb-6 opacity-50 grayscale">
+        © 2026 RCR Seguridad Privada SpA | Santiago, Chile
+    </footer>
+
+    <a href="https://wa.me/56999158787" class="fixed bottom-8 right-8 gold-gradient text-black w-14 h-14 rounded-full flex items-center justify-center text-xl shadow-[0_0_20px_rgba(181,148,88,0.4)] z-50 hover:scale-110 transition">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
