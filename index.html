@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth" style="scroll-padding-top: 160px;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,19 +32,19 @@
         }
     </script>
     <style>
-        /* CORRECCIÓN DE POSICIONAMIENTO AL CLICKEAR */
-        header, section {
-            scroll-margin-top: 140px; /* Esto empuja la sección hacia abajo para que el HUD no la tape */
-            display: flex;
+        /* FUERZA EL CENTRADO VERTICAL ABSOLUTO */
+        section, header {
+            display: flex !important;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Fuerza a que cada sección ocupe toda la pantalla */
-            padding: 4rem 1rem;
+            justify-content: center; /* Centra verticalmente */
+            align-items: center;     /* Centra horizontalmente */
+            min-height: 100vh;       /* Cada sección ocupa toda la pantalla */
+            width: 100%;
+            padding: 2rem 0;
         }
 
         .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #ffedbb 50%, #b59458 100%); }
-        .glass { background: rgba(18, 18, 18, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(181, 148, 88, 0.15); }
+        .glass { background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(181, 148, 88, 0.2); }
         .text-shimmer {
             background: linear-gradient(90deg, #b59458, #fff 25%, #b59458 50%, #fff 75%, #b59458);
             background-size: 200% auto;
@@ -62,7 +62,7 @@
 
     <nav class="fixed top-0 w-full z-50 bg-black/95 border-b border-rcr-gold/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="h-12 w-12 md:h-16 md:w-16 rounded-full border border-rcr-gold/30 overflow-hidden bg-black aspect-square">
+            <div class="h-12 w-12 md:h-16 md:w-16 rounded-full border border-rcr-gold/30 overflow-hidden bg-black shadow-2xl">
                 <img src="logo-modified.png" alt="RCR" class="h-full w-full object-cover">
             </div>
             <div class="flex items-center space-x-4 md:space-x-10 text-[9px] md:text-[11px] uppercase tracking-widest font-bold">
@@ -70,7 +70,7 @@
                 <a href="#servicios" class="hover:text-rcr-gold transition-colors">Servicios</a>
                 <a href="#reclutamiento" class="hover:text-rcr-gold transition-colors">Postula</a>
                 <a href="#ubicacion" class="hover:text-rcr-gold transition-colors">Ubicación</a>
-                <a href="#contacto" class="gold-gradient text-black px-4 md:px-6 py-2 rounded-full shadow-lg">Contactanos</a>
+                <a href="#contacto" class="gold-gradient text-black px-4 md:px-6 py-2 rounded-full shadow-lg hover:scale-105 transition-transform">Contactanos</a>
             </div>
         </div>
     </nav>
@@ -80,50 +80,50 @@
             <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2000" class="w-full h-full object-cover opacity-20 animate-slow-pan grayscale">
             <div class="absolute inset-0 bg-gradient-to-b from-rcr-dark via-transparent to-rcr-dark"></div>
         </div>
-        <div class="relative z-10 w-full max-w-6xl">
+        <div class="relative z-10 w-full max-w-6xl px-6">
             <div class="mb-6 inline-block">
-                <span class="px-6 py-2 border border-rcr-gold/40 rounded-full text-[10px] md:text-xs tracking-[0.4em] text-rcr-gold uppercase font-bold bg-black/40">Estándar de Excelencia</span>
+                <span class="px-6 py-2 border border-rcr-gold/40 rounded-full text-[10px] md:text-xs tracking-[0.4em] text-rcr-gold uppercase font-bold bg-black/60">Estándar de Excelencia</span>
             </div>
-            <h1 class="text-7xl md:text-[16rem] font-black mb-0 tracking-tighter leading-none text-white drop-shadow-2xl">RCR</h1>
-            <p class="text-shimmer text-xl md:text-6xl font-extralight italic uppercase tracking-[0.2em]">Seguridad Privada SpA</p>
+            <h1 class="text-7xl md:text-[15rem] font-black mb-0 tracking-tighter leading-none text-white drop-shadow-2xl">RCR</h1>
+            <p class="text-shimmer text-xl md:text-5xl font-extralight italic uppercase tracking-[0.2em] mt-2">Seguridad Privada SpA</p>
         </div>
     </header>
 
     <section id="servicios" class="bg-rcr-gray/20">
         <div class="max-w-7xl mx-auto w-full px-6">
             <div class="text-center mb-16">
-                <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Expertise Operativa</h2>
-                <h3 class="text-4xl md:text-6xl font-black italic uppercase">Nuestros <span class="text-rcr-gold">Servicios</span></h3>
+                <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Nuestra Expertise</h2>
+                <h3 class="text-4xl md:text-6xl font-black italic uppercase">Servicios de <span class="text-rcr-gold">Elite</span></h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div class="glass p-10 rounded-3xl border-t-2 border-rcr-gold/30">
+                <div class="glass p-10 rounded-3xl border-t-4 border-rcr-gold">
                     <i class="fas fa-user-shield text-4xl text-rcr-gold mb-6"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Guardias OS10</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Personal altamente entrenado para el control de acceso y vigilancia perimetral.</p>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">Guardias</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Personal certificado OS10 con entrenamiento táctico avanzado.</p>
                 </div>
-                <div class="glass p-10 rounded-3xl border-t-2 border-rcr-gold/30">
+                <div class="glass p-10 rounded-3xl border-t-4 border-rcr-gold">
                     <i class="fas fa-video text-4xl text-rcr-gold mb-6"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">CCTV Táctico</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Sistemas de monitoreo en tiempo real con tecnología de última generación.</p>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">CCTV</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Monitoreo inteligente 24/7 con analítica de video avanzada.</p>
                 </div>
-                <div class="glass p-10 rounded-3xl border-t-2 border-rcr-gold/30">
-                    <i class="fas fa-lock text-4xl text-rcr-gold mb-6"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest">Seguridad SpA</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Protección de activos críticos y gestión de riesgos empresariales.</p>
+                <div class="glass p-10 rounded-3xl border-t-4 border-rcr-gold">
+                    <i class="fas fa-shield-alt text-4xl text-rcr-gold mb-6"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">Protección</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Soluciones integrales de seguridad para activos de alto valor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reclutamiento">
+    <section id="reclutamiento" class="px-4">
         <div class="max-w-6xl mx-auto w-full glass rounded-[2.5rem] overflow-hidden flex flex-col md:flex-row shadow-2xl">
-            <div class="md:w-1/2 p-10 md:p-20 text-left flex flex-col justify-center">
-                <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-6">Únete al Equipo</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic leading-tight">¿Tienes lo que se necesita?</h3>
-                <p class="text-gray-400 mb-10 text-lg italic">Buscamos especialistas en seguridad con vocación de servicio. Envíanos tu información.</p>
+            <div class="md:w-1/2 p-10 md:p-16 text-left flex flex-col justify-center">
+                <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-6">Reclutamiento</h2>
+                <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic leading-tight text-white">Únete a la Elite</h3>
+                <p class="text-gray-400 mb-10 text-lg leading-relaxed">Buscamos profesionales comprometidos. Si tienes curso OS10 vigente, postula con nosotros.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/56999158787" class="gold-gradient text-black px-8 py-5 font-black uppercase text-[10px] rounded-xl text-center flex-1 shadow-lg">WhatsApp</a>
-                    <a href="mailto:rcr.seguridad@gmail.com" class="border border-rcr-gold text-rcr-gold px-8 py-5 font-black uppercase text-[10px] rounded-xl text-center flex-1 hover:bg-rcr-gold hover:text-black transition-all">Enviar CV</a>
+                    <a href="https://wa.me/56999158787" class="gold-gradient text-black px-8 py-4 font-black uppercase text-[11px] rounded-xl text-center flex-1 shadow-lg">WhatsApp</a>
+                    <a href="mailto:rcr.seguridad@gmail.com" class="border border-rcr-gold text-rcr-gold px-8 py-4 font-black uppercase text-[11px] rounded-xl text-center flex-1 hover:bg-rcr-gold/10 transition-colors">Enviar CV</a>
                 </div>
             </div>
             <div class="md:w-1/2 bg-black flex items-center p-6 min-h-[400px]">
@@ -140,13 +140,28 @@
         </div>
     </section>
 
-    <section id="ubicacion" class="bg-black/20">
-        <div class="max-w-2xl mx-auto w-full px-6">
+    <section id="ubicacion" class="bg-black/40">
+        <div class="max-w-3xl mx-auto w-full px-6 text-center">
             <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-8">Centro de Operaciones</h2>
-            <div class="glass p-3 rounded-[3rem] h-[400px] relative overflow-hidden shadow-2xl border border-rcr-gold/20">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.626815802111!2d-71.378275!3d-33.026725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d9018428805f%3A0xc3f8e4e9a38f9760!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl0" class="w-full h-full rounded-[2.5rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="glass p-4 rounded-[3rem] h-[450px] relative overflow-hidden shadow-2xl border border-rcr-gold/30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.626815802111!2d-71.378275!3d-33.026725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d9018428805f%3A0xc3f8e4e9a38f9760!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl1" class="w-full h-full rounded-[2rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <p class="mt-8 text-gray-500 text-xs uppercase tracking-widest italic">Buenos Aires 1140, Oficina A2 · Villa Alemana, Chile</p>
+            <p class="mt-8 text-gray-400 text-xs uppercase tracking-[0.3em] font-medium">Buenos Aires 1140, Oficina A2 · Villa Alemana</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="px-6">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic mb-4">Contacto <span class="text-rcr-gold">Estratégico</span></h2>
+                <div class="h-1 w-20 gold-gradient mx-auto"></div>
+            </div>
+            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-rcr-gray/80 p-8 md:p-12 border border-white/10 rounded-[2rem] text-left">
+                <input type="text" name="nombre" placeholder="Nombre / Empresa" class="bg-black/50 border border-white/10 p-4 rounded-xl focus:border-rcr-gold outline-none text-xs text-white" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" class="bg-black/50 border border-white/10 p-4 rounded-xl focus:border-rcr-gold outline-none text-xs text-white" required>
+                <textarea name="mensaje" placeholder="Describa su requerimiento..." class="md:col-span-2 bg-black/50 border border-white/10 p-4 rounded-xl focus:border-rcr-gold outline-none text-xs text-white h-32" required></textarea>
+                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 rounded-xl uppercase tracking-[0.4em] text-[11px] hover:brightness-110 transition-all">Enviar Solicitud</button>
+            </form>
         </div>
     </section>
 
@@ -154,7 +169,7 @@
         <div class="h-14 w-14 rounded-full border border-rcr-gold/30 overflow-hidden mx-auto mb-6 shadow-2xl">
              <img src="logo-modified.png" class="h-full w-full object-cover">
         </div>
-        <p class="text-[10px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA</p>
+        <p class="text-[10px] text-gray-600 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA</p>
     </footer>
 
     <a href="https://wa.me/56999158787" class="fixed bottom-8 right-8 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl md:text-2xl shadow-2xl z-50 animate-pulse-gold-infinite">
