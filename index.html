@@ -38,14 +38,12 @@
 
     <nav class="fixed w-full z-50 bg-black/95 border-b border-rcr-gold/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            
             <div class="relative group">
                 <div class="absolute -inset-1 bg-rcr-gold/30 rounded-full blur opacity-40 group-hover:opacity-70 transition duration-1000"></div>
                 <div class="relative h-20 w-20 rounded-full border-2 border-rcr-gold/50 overflow-hidden bg-black flex items-center justify-center shadow-[0_0_20px_rgba(181,148,88,0.3)]">
                     <img src="logo.png" alt="RCR Logo" class="h-full w-full object-cover scale-110">
                 </div>
             </div>
-            
             <div class="hidden md:flex space-x-8 text-[11px] uppercase tracking-[0.3em] font-bold items-center">
                 <a href="#quienes-somos" class="hover:text-rcr-gold transition">Quiénes Somos</a>
                 <a href="#servicios" class="hover:text-rcr-gold transition">Servicios</a>
@@ -55,30 +53,30 @@
         </div>
     </nav>
 
-    <header id="quienes-somos" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <header id="quienes-somos" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-40 pb-20">
         <div class="absolute inset-0 z-0 flex items-center justify-center opacity-[0.03]">
              <img src="logo.png" class="w-[50%] h-auto rotate-12">
         </div>
         
-        <div class="relative z-10 px-6 pt-20">
+        <div class="relative z-10 px-6 max-w-5xl">
             <h2 class="text-rcr-gold font-bold tracking-[0.6em] uppercase text-xs mb-6 opacity-80">Presentación Oficial</h2>
-            <h1 class="text-9xl md:text-[15rem] font-black mb-0 tracking-tighter leading-none text-white drop-shadow-[0_10px_30px_rgba(181,148,88,0.2)]">
+            <h1 class="text-8xl md:text-[13rem] font-black mb-0 tracking-tighter leading-none text-white drop-shadow-[0_10px_30px_rgba(181,148,88,0.2)]">
                 RCR
             </h1>
-            <p class="text-shimmer text-2xl md:text-5xl font-light italic mb-12 tracking-[0.3em] uppercase">
+            <p class="text-shimmer text-xl md:text-5xl font-light italic mb-16 tracking-[0.3em] uppercase">
                 Seguridad Privada
             </p>
             
-            <div class="max-w-3xl mx-auto bg-black/40 p-8 border-y border-rcr-gold/20 backdrop-blur-sm">
-                <h3 class="text-xl font-bold mb-4 text-rcr-gold uppercase tracking-[0.4em]">Quiénes Somos</h3>
-                <p class="text-gray-300 text-lg leading-relaxed italic font-light">
+            <div class="bg-black/40 p-10 border-y border-rcr-gold/20 backdrop-blur-sm mx-auto shadow-2xl">
+                <h3 class="text-xl font-bold mb-6 text-rcr-gold uppercase tracking-[0.4em]">Quiénes Somos</h3>
+                <p class="text-gray-300 text-lg md:text-xl leading-relaxed italic font-light">
                     "En <span class="text-white font-bold">RCR Seguridad Privada SpA</span> somos expertos en la gestión de riesgo y protección de activos. Nos especializamos en el reclutamiento de personal táctico y su despliegue bajo los más altos estándares de disciplina."
                 </p>
             </div>
         </div>
     </header>
 
-    <section id="servicios" class="py-24 bg-rcr-gray px-6 border-y border-white/5">
+    <section id="servicios" class="py-32 bg-rcr-gray px-6 border-y border-white/5 relative z-20">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="border-l-2 border-rcr-gold pl-6 text-left group">
@@ -100,7 +98,7 @@
         </div>
     </section>
 
-    <section id="reclutamiento" class="py-24 px-6">
+    <section id="reclutamiento" class="py-32 px-6">
         <div class="max-w-4xl mx-auto border border-rcr-gold/20 bg-black/40 p-12 backdrop-blur-sm">
             <h2 class="text-4xl font-black mb-6 italic uppercase tracking-tighter">Únete al equipo</h2>
             <p class="text-gray-400 mb-12 italic">Buscamos profesionales comprometidos. Postula hoy mismo.</p>
@@ -111,29 +109,23 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-24 px-6 bg-black/50">
+    <section id="contacto" class="py-32 px-6 bg-black/50">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-black text-center mb-12 uppercase italic tracking-widest text-rcr-gold">Solicitar Servicios</h2>
-            
             <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid md:grid-cols-2 gap-8 bg-rcr-gray/30 p-10 border border-white/5">
-                
                 <div class="flex flex-col gap-2 text-left">
                     <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Nombre Completo</label>
                     <input type="text" name="nombre" placeholder="NOMBRE" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest" required>
                 </div>
-
                 <div class="flex flex-col gap-2 text-left">
                     <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Correo Electrónico</label>
                     <input type="email" name="email" placeholder="CORREO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest" required>
                 </div>
-
                 <div class="md:col-span-2 flex flex-col gap-2 text-left">
                     <label class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Detalles del Servicio</label>
                     <textarea name="mensaje" placeholder="DESCRIPCIÓN DEL REQUERIMIENTO" class="bg-transparent border-b border-gray-700 p-3 focus:border-rcr-gold outline-none transition text-xs tracking-widest h-32" required></textarea>
                 </div>
-
                 <input type="hidden" name="_subject" value="Nueva Solicitud Web - RCR">
-
                 <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 uppercase tracking-[0.4em] hover:scale-[1.02] transition">
                     Enviar Requerimiento
                 </button>
