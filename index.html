@@ -17,8 +17,8 @@
                     },
                     animation: {
                         'slow-pan': 'pan 30s linear infinite',
-                        /* CAMBIADO A 15s TOTALES */
                         'carousel-slide': 'slide 15s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+                        'pulse-gold': 'pulse-gold 2s infinite',
                     },
                     keyframes: {
                         pan: {
@@ -27,12 +27,16 @@
                             '100%': { transform: 'scale(1) translateX(0)' },
                         },
                         slide: {
-                            /* AJUSTADO PARA 3 SEGUNDOS POR IMAGEN */
-                            '0%, 16%': { transform: 'translateX(0)' },       /* Foto 1 */
-                            '20%, 36%': { transform: 'translateX(-20%)' },   /* Foto 2 */
-                            '40%, 56%': { transform: 'translateX(-40%)' },   /* Foto 3 */
-                            '60%, 76%': { transform: 'translateX(-60%)' },   /* Foto 4 */
-                            '80%, 100%': { transform: 'translateX(-80%)' },  /* Foto 1 (Repetida) */
+                            '0%, 16%': { transform: 'translateX(0)' },
+                            '20%, 36%': { transform: 'translateX(-20%)' },
+                            '40%, 56%': { transform: 'translateX(-40%)' },
+                            '60%, 76%': { transform: 'translateX(-60%)' },
+                            '80%, 100%': { transform: 'translateX(-80%)' },
+                        },
+                        'pulse-gold': {
+                            '0%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0.7)' },
+                            '70%': { boxShadow: '0 0 0 20px rgba(181, 148, 88, 0)' },
+                            '100%': { boxShadow: '0 0 0 0 rgba(181, 148, 88, 0)' },
                         }
                     }
                 }
@@ -64,6 +68,11 @@
             object-fit: cover;
             padding: 2px;
         }
+
+        /* Animación extra para el botón flotante */
+        .btn-float-wa {
+            animation: pulse-gold 2s infinite;
+        }
     </style>
 </head>
 <body class="bg-rcr-dark text-white font-sans antialiased bg-pattern text-center">
@@ -80,7 +89,7 @@
                 <a href="#quienes-somos" class="hover:text-rcr-gold transition-all">Quienes somos</a>
                 <a href="#servicios" class="hidden sm:inline hover:text-rcr-gold transition-all">Servicios</a>
                 <a href="#reclutamiento" class="hidden md:inline hover:text-rcr-gold transition-all">Postula</a>
-                <a href="#contactanos" class="gold-gradient text-black px-5 md:px-8 py-2 md:py-3 rounded-full hover:scale-105 transition-all shadow-xl shadow-rcr-gold/10">Contacto</a>
+                <a href="#contacto" class="gold-gradient text-black px-5 md:px-8 py-2 md:py-3 rounded-full hover:scale-105 transition-all shadow-xl shadow-rcr-gold/10">Contacto</a>
             </div>
         </div>
     </nav>
@@ -224,7 +233,7 @@
         <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA | Villa Alemana, Chile</p>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl shadow-2xl z-50">
+    <a href="https://wa.me/56999158787" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xl shadow-2xl z-50 btn-float-wa">
         <i class="fab fa-whatsapp"></i>
     </a>
 
