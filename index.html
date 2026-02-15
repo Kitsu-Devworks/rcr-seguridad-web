@@ -60,10 +60,9 @@
             padding: 20px 20px 60px 20px;
         }
 
-        /* AJUSTE ESPECÍFICO PARA CENTRADO TOTAL DEL MAPA */
         #ubicacion {
             scroll-margin-top: 0px !important;
-            padding-top: 90px !important; /* Compensa la altura del navbar */
+            padding-top: 90px !important;
         }
 
         .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #ffedbb 50%, #b59458 100%); }
@@ -180,7 +179,7 @@
         <div class="max-w-3xl mx-auto w-full px-6 text-center">
             <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-10">Nuestras Oficinas</h2>
             <div class="glass p-3 rounded-[3rem] h-[400px] md:h-[450px] relative overflow-hidden shadow-2xl border border-rcr-gold/30">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.626353982463!2d-71.3745281!3d-33.0125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d97d02000001%3A0x6b3b5e4c6b5e5e5e!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl3" class="w-full h-full rounded-[2.5rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.5414603953493!2d-71.3788094234509!3d-33.029051876403984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d903915150e7%3A0x6a0f670e3001f35!2sBuenos%20Aires%201140%2C%20Oficina%20A2%2C%20Villa%20Alemana%2C%20Chile!5e0!3m2!1ses!2scl!4v1700000000000!5m2!1ses!2scl" class="w-full h-full rounded-[2.5rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <p class="mt-8 text-gray-500 text-[10px] uppercase tracking-widest italic font-bold">Buenos Aires 1140, Oficina A2 · Villa Alemana, Chile</p>
         </div>
@@ -198,14 +197,36 @@
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/5 bg-rcr-dark">
-        <div class="h-12 w-12 rounded-full border border-rcr-gold/30 overflow-hidden mx-auto mb-6">
-             <img src="logo-modified.png" class="h-full w-full object-cover">
+    <footer class="py-16 border-t border-white/5 bg-rcr-dark/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+            
+            <div class="h-12 w-12 rounded-full border border-rcr-gold/20 overflow-hidden mb-6 opacity-40 hover:opacity-100 transition-all duration-700">
+                 <img src="logo-modified.png" class="h-full w-full object-cover" alt="RCR Logo">
+            </div>
+            
+            <p class="text-[10px] text-gray-700 uppercase tracking-[0.6em] mb-12">
+                © 2026 RCR Seguridad Privada SpA
+            </p>
+
+            <div class="pt-10 border-t border-white/5 w-full max-w-sm flex flex-col items-center">
+                <span class="text-[7px] text-gray-600 uppercase tracking-[0.4em] mb-5 font-bold">Design & Tech by</span>
+                
+                <a href="#" class="flex items-center space-x-4 group transition-all duration-500">
+                    <img src="KitsuLogo2.png" alt="KitsuDevWorks" class="h-10 w-auto brightness-90 group-hover:brightness-110 transition-all">
+                    <div class="text-left border-l border-white/10 pl-4 py-1">
+                        <div class="text-lg font-black tracking-tighter text-white/80 group-hover:text-white transition-colors leading-none">
+                            Kitsu<span class="text-rcr-gold">DevWorks</span>
+                        </div>
+                        <div class="text-[8px] text-gray-500 uppercase tracking-[0.2em] mt-1 font-light">
+                            Creative Studio
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em]">© 2026 RCR Seguridad Privada SpA</p>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-10 right-10 gold-gradient text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-xl z-50 animate-pulse-gold-infinite">
+    <a href="https://wa.me/56999158787" class="fixed bottom-10 right-10 gold-gradient text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-xl z-50 animate-pulse-gold-infinite hover:scale-110 transition-all">
         <i class="fab fa-whatsapp"></i>
     </a>
 
