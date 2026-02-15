@@ -32,7 +32,7 @@
         }
     </script>
     <style>
-        /* AJUSTE DE PRECISIÓN DE SCROLL Y CENTRADO */
+        /* AJUSTE DE PRECISIÓN PARA QUE NO SE TAPE EL ESTÁNDAR DE EXCELENCIA */
         header, section {
             display: flex !important;
             flex-direction: column;
@@ -40,9 +40,9 @@
             align-items: center;
             min-height: 100vh;
             width: 100%;
-            /* Este es el margen que evita que el HUD tape el contenido al clickear */
-            scroll-margin-top: 100px; 
-            padding: 80px 20px;
+            /* Aumentamos el margen de scroll para que al clickear no se pegue al HUD */
+            scroll-margin-top: 120px; 
+            padding: 100px 20px 60px 20px;
         }
 
         .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #ffedbb 50%, #b59458 100%); }
@@ -84,7 +84,7 @@
             <div class="absolute inset-0 bg-gradient-to-b from-rcr-dark via-transparent to-rcr-dark"></div>
         </div>
         <div class="relative z-10 px-6 w-full max-w-6xl">
-            <div class="mb-6 inline-block">
+            <div class="mb-10 inline-block pt-8">
                 <span class="px-6 py-2 border border-rcr-gold/40 rounded-full text-[9px] md:text-[11px] tracking-[0.5em] text-rcr-gold uppercase font-bold bg-black/60 shadow-xl">Estándar de Excelencia</span>
             </div>
             <h1 class="text-7xl md:text-[12rem] lg:text-[16rem] font-black mb-0 tracking-tighter leading-none text-white opacity-95 drop-shadow-2xl">RCR</h1>
@@ -105,12 +105,12 @@
     </section>
 
     <section id="servicios" class="bg-black/40">
-        <div class="max-w-7xl mx-auto w-full px-6">
-            <div class="text-left mb-16">
+        <div class="max-w-7xl mx-auto w-full px-6 text-left">
+            <div class="mb-16">
                 <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Nuestra Expertise</h2>
                 <h3 class="text-4xl md:text-6xl font-black italic uppercase text-white leading-tight">Servicios de <br><span class="text-rcr-gold">Alto Impacto</span></h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="group bg-rcr-dark p-10 border border-white/5 hover:border-rcr-gold/40 transition-all rounded-2xl">
                     <i class="fas fa-user-shield text-4xl text-rcr-gold mb-8"></i>
                     <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">Guardias OS10</h4>
@@ -137,11 +137,11 @@
                 <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic text-white leading-tight">Únete a la Elite</h3>
                 <p class="text-gray-400 mb-10 text-lg font-light italic leading-relaxed">¿Tienes lo que se necesita? Buscamos profesionales comprometidos con la seguridad privada de alto nivel.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/56999158787" class="gold-gradient text-black px-8 py-4 font-black uppercase text-[10px] rounded-xl text-center flex-1 shadow-lg">WhatsApp</a>
+                    <a href="https://wa.me/56999158787" class="gold-gradient text-black px-8 py-4 font-black uppercase text-[10px] rounded-xl text-center flex-1">WhatsApp</a>
                     <a href="mailto:rcr.seguridad@gmail.com" class="border border-rcr-gold text-rcr-gold px-8 py-4 font-black uppercase text-[10px] rounded-xl text-center flex-1">Enviar CV</a>
                 </div>
             </div>
-            <div class="md:w-1/2 bg-black flex items-center p-6 min-h-[400px]">
+            <div class="md:w-1/2 bg-black flex items-center p-6">
                 <div class="w-full overflow-hidden rounded-3xl relative">
                     <div class="flex w-[500%] animate-carousel-slide">
                         <img src="foto1.png" class="carousel-photo">
@@ -156,10 +156,10 @@
     </section>
 
     <section id="ubicacion" class="bg-rcr-gray/20">
-        <div class="max-w-3xl mx-auto w-full px-6">
+        <div class="max-w-3xl mx-auto w-full px-6 text-center">
             <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-10">Centro de Operaciones</h2>
             <div class="glass p-3 rounded-[3rem] h-[400px] md:h-[450px] relative overflow-hidden shadow-2xl border border-rcr-gold/30">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.821952136069!2d-71.3789438!3d-33.0348737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d70104764955%3A0x8979d39e8361b369!2sBuenos%20Aires%201140%2C%20Oficina%20A2%2C%20Villa%20Alemana!5e0!3m2!1ses!2scl!4v1700000000000" class="w-full h-full rounded-[2.5rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.821102914713!2d-71.3785483243126!3d-33.03487197355644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d7fb8f5b5b5b%3A0x2f4f4f4f4f4f4f4f!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl4" class="w-full h-full rounded-[2.5rem] map-dark" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <p class="mt-8 text-gray-500 text-[10px] uppercase tracking-widest italic font-bold">Buenos Aires 1140, Oficina A2 · Villa Alemana, Chile</p>
         </div>
