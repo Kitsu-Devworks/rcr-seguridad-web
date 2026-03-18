@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RCR Seguridad Privada SpA | Guardias, OS10 y Drones</title>
+    <title>RCR Seguridad Privada SpA | OS10 & Tecnología Dron</title>
     <link rel="icon" type="image/png" href="logo-modified.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,12 +14,14 @@
                 extend: {
                     colors: {
                         'rcr-gold': '#b59458',
-                        'rcr-dark': '#070707',
-                        'rcr-gray': '#111111',
+                        'rcr-gold-light': '#e6d09e',
+                        'rcr-dark': '#0a0a0a',
+                        'rcr-gray': '#141414',
+                        'rcr-card': '#111111',
                     },
                     animation: {
                         'slow-pan': 'pan 40s linear infinite',
-                        'pulse-gold': 'pulse-gold 2s infinite',
+                        'pulse-gold-infinite': 'pulse-gold 2s infinite',
                     },
                     keyframes: {
                         pan: { '0%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.05)' }, '100%': { transform: 'scale(1)' } },
@@ -30,25 +32,25 @@
         }
     </script>
     <style>
-        body { background-color: #070707 !important; }
+        body { background-color: #0a0a0a !important; }
         section, header { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; padding: 100px 24px; }
         
         /* Premium UI Elements */
-        .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #d4b881 50%, #b59458 100%); }
-        .gold-text-gradient { background: linear-gradient(to right, #d4b881, #b59458, #d4b881); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: textShimmer 4s linear infinite; }
+        .gold-gradient { background: linear-gradient(135deg, #b59458 0%, #e6d09e 50%, #b59458 100%); }
+        .gold-text-gradient { background: linear-gradient(to right, #e6d09e, #b59458, #e6d09e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200% auto; animation: textShimmer 4s linear infinite; }
         @keyframes textShimmer { to { background-position: 200% center; } }
-        .glass-panel { background: rgba(17, 17, 17, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(181, 148, 88, 0.15); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
+        .glass-panel { background: rgba(15, 15, 15, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(181, 148, 88, 0.2); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
         .map-filter { filter: grayscale(100%) invert(95%) contrast(110%); }
 
-        /* Carrusel Cinematico (Fade + Zoom) */
-        .carousel-container { position: relative; width: 100%; height: 100%; min-height: 400px; overflow: hidden; border-radius: 0.25rem; border: 1px solid rgba(181, 148, 88, 0.2); }
-        .carousel-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); animation: cinematicFade 16s infinite; }
+        /* NUEVO Carrusel Táctico (Fade + Zoom Cinematico) - Ciclo de 12s para 4 fotos */
+        .carousel-track { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 0.25rem; }
+        .carousel-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); animation: cinematicFade 12s infinite; border: 1px solid #b59458; border-radius: 0.25rem; box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6); }
         
-        /* Tiempos para 4 fotos (4s cada una) */
-        .carousel-slide:nth-child(1) { animation-delay: 0s; }
-        .carousel-slide:nth-child(2) { animation-delay: 4s; }
-        .carousel-slide:nth-child(3) { animation-delay: 8s; }
-        .carousel-slide:nth-child(4) { animation-delay: 12s; }
+        /* Tiempos para 4 fotos (3s por foto) */
+        .carousel-photo:nth-child(1) { animation-delay: 0s; }
+        .carousel-photo:nth-child(2) { animation-delay: 3s; }
+        .carousel-photo:nth-child(3) { animation-delay: 6s; }
+        .carousel-photo:nth-child(4) { animation-delay: 9s; }
 
         @keyframes cinematicFade {
             0% { opacity: 0; transform: scale(1.05); }
@@ -65,16 +67,16 @@
 </head>
 <body class="text-gray-300 font-sans antialiased selection:bg-rcr-gold selection:text-black">
 
-    <nav class="fixed top-0 w-full z-50 bg-rcr-dark/95 border-b border-rcr-gold/20 backdrop-blur-md h-20 flex items-center">
+    <nav class="fixed top-0 w-full z-50 bg-rcr-dark/95 border-b border-rcr-gold/15 backdrop-blur-lg h-20 flex items-center transition-all">
         <div class="max-w-7xl mx-auto w-full px-6 flex justify-between items-center">
-            <a href="#inicio" class="h-12 w-12 rounded-full border border-rcr-gold/40 overflow-hidden bg-black flex items-center justify-center p-0.5 shadow-lg shrink-0 btn-hover">
+            <a href="#inicio" class="h-12 w-12 rounded-full border border-rcr-gold/30 overflow-hidden bg-black flex items-center justify-center p-0.5 shadow-lg shrink-0 btn-hover">
                 <img src="logo-modified.png" alt="RCR Logo" class="h-full w-full object-contain">
             </a>
-            <div class="flex items-center justify-end gap-5 md:gap-8 font-bold uppercase text-[10px] md:text-xs tracking-widest text-gray-400">
+            <div class="flex items-center justify-end gap-3 md:gap-7 font-bold uppercase text-[9px] md:text-xs tracking-widest text-gray-400">
                 <a href="#quienes-somos" class="hover:text-rcr-gold transition-colors hidden sm:block">Empresa</a>
-                <a href="#servicios" class="hover:text-rcr-gold transition-colors hidden sm:block">Servicios</a>
+                <a href="#servicios" class="hover:text-rcr-gold transition-colors hidden sm:block">Capacidades</a>
                 <a href="#reclutamiento" class="hover:text-rcr-gold transition-colors hidden sm:block">Formación</a>
-                <a href="#contacto" class="gold-gradient text-black px-6 py-2.5 rounded-sm font-black btn-hover">Cotizar</a>
+                <a href="#contacto" class="gold-gradient text-black px-5 py-2.5 rounded-sm font-black btn-hover">Cotizar</a>
             </div>
         </div>
     </nav>
@@ -82,78 +84,78 @@
     <header id="inicio" class="relative overflow-hidden text-center">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2000" class="w-full h-full object-cover opacity-10 animate-slow-pan grayscale">
-            <div class="absolute inset-0 bg-gradient-to-t from-rcr-dark via-transparent to-rcr-dark"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-rcr-dark via-rcr-dark/70 to-transparent"></div>
         </div>
         <div class="relative z-10 w-full max-w-5xl px-4">
-            <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 border border-rcr-gold/30 bg-black/60 backdrop-blur-sm rounded-sm">
-                <div class="w-2 h-2 rounded-full bg-rcr-gold animate-pulse"></div>
-                <span class="text-[10px] tracking-[0.4em] text-rcr-gold uppercase font-bold">Seguridad Legal & Operativa</span>
+            <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 border border-rcr-gold/20 bg-black/40 rounded-sm shadow-inner">
+                <div class="w-1.5 h-1.5 rounded-full bg-rcr-gold animate-pulse"></div>
+                <span class="text-[9px] tracking-[0.4em] text-rcr-gold uppercase font-semibold">Soluciones Legales & Operativas</span>
             </div>
             <h1 class="text-7xl md:text-9xl font-black mb-2 tracking-tighter text-white italic drop-shadow-2xl">RCR</h1>
-            <p class="text-2xl md:text-4xl font-light uppercase tracking-[0.25em] text-gray-200">Seguridad Privada <span class="font-bold gold-text-gradient">SpA</span></p>
+            <p class="text-xl md:text-4xl font-light uppercase tracking-[0.25em] text-gray-200">Servicios de <span class="font-bold gold-text-gradient">Protección Elite SpA</span></p>
             <p class="mt-8 max-w-2xl mx-auto text-sm md:text-base text-gray-400 font-light leading-relaxed">
-                Provisión de guardias certificados OS10 para empresas y eventos, vigilancia táctica con drones y academia de formación profesional en la Quinta Región.
+                Especialistas en la Quinta Región: Guardias Acreditados OS10 para empresas y eventos masivos, Academia de Capacitación Profesional y División Tecnológica con Drones.
             </p>
         </div>
     </header>
 
     <section id="quienes-somos" class="bg-gradient-to-b from-rcr-dark to-rcr-gray">
         <div class="max-w-4xl mx-auto w-full text-center">
-            <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-4">Respaldo y Confianza</h2>
-            <h3 class="text-3xl md:text-5xl font-black uppercase mb-10 text-white">¿Por qué elegir <span class="gold-text-gradient">RCR?</span></h3>
-            <div class="glass-panel p-10 md:p-14 border-l-4 border-l-rcr-gold text-left rounded-sm">
+            <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Liderazgo Institucional</h2>
+            <h3 class="text-3xl md:text-5xl font-black uppercase mb-10 text-white">Compromiso <span class="gold-text-gradient">con la Excelencia</span></h3>
+            <div class="glass-panel p-9 md:p-14 border-l-4 border-l-rcr-gold text-left rounded-sm shadow-xl">
                 <p class="text-gray-300 text-lg md:text-xl leading-relaxed font-light">
-                    Somos una empresa acreditada orientada a la mitigación de riesgos operativos. Proveemos personal táctico para el resguardo de instalaciones y eventos masivos. Asimismo, formamos profesionales mediante nuestros cursos OS10 y capacitación especializada en pilotaje de drones, garantizando excelencia y apego a la normativa legal vigente.
+                    RCR Seguridad Privada SpA es el socio estratégico definitivo en la Región de Valparaíso. Entregamos soluciones integrales de protección basadas en la estricta normativa OS10 de Carabineros de Chile. Fusionamos el rigor de personal altamente capacitado para entornos críticos y eventos masivos, con la eficiencia de tecnología avanzada en vigilancia aérea y monitoreo táctico perimetral.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="bg-rcr-gray">
+    <section id="servicios" class="bg-rcr-dark">
         <div class="max-w-7xl mx-auto w-full">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase text-white">Líneas de <span class="gold-text-gradient">Servicio Operativo</span></h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-black/50 p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative">
-                    <i class="fas fa-user-shield text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">Guardias para Eventos</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Contratación inmediata de personal certificado OS10. Especialistas en control de acceso, disuasión y resguardo en condominios, empresas y eventos masivos.</p>
+                <div class="bg-rcr-card p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative overflow-hidden">
+                    <i class="fas fa-user-shield text-4xl text-rcr-gold mb-7 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-wider text-white">Guardias para Eventos y Empresas</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Contratación inmediata de personal acreditado OS10. Especialistas en control de acceso, disuasión operativa y resguardo de activos en industrias, condominios y eventos masivos.</p>
                 </div>
-                <div class="bg-black/50 p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative">
-                    <i class="fas fa-graduation-cap text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">Cursos OS10</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Programas de formación y actualización. Obtén o renueva tu credencial OS10 con instructores acreditados para asegurar tu empleabilidad en el sector.</p>
+                <div class="bg-rcr-card p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative overflow-hidden">
+                    <i class="fas fa-graduation-cap text-4xl text-rcr-gold mb-7 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-wider text-white">Cursos de Capacitación OS10</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Formación integral y renovación de credenciales. Instructores acreditados garantizan que tu personal cumpla con los máximos estándares legales y tácticos del sector.</p>
                 </div>
-                <div class="bg-black/50 p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative">
-                    <i class="fas fa-crosshairs text-4xl text-rcr-gold mb-6 group-hover:scale-110 transition-transform"></i>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-widest text-white">División Drones</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed">Supervisión aérea para grandes extensiones perimetrales. Ofrecemos servicios de vigilancia táctica y cursos de pilotaje aplicados a la seguridad privada.</p>
+                <div class="bg-rcr-card p-10 border border-white/5 hover:border-rcr-gold/50 transition-all duration-300 rounded-sm group relative overflow-hidden">
+                    <i class="fas fa-crosshairs text-4xl text-rcr-gold mb-7 block group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-wider text-white">Vigilancia Aérea & Drones</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tecnología de punta para monitoreo de grandes extensiones perimetrales. Ofrecemos servicios de vigilancia táctica y cursos de pilotaje aplicados a la seguridad privada.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reclutamiento" class="bg-gradient-to-b from-rcr-gray to-rcr-dark overflow-hidden">
-        <div class="max-w-7xl mx-auto w-full glass-panel rounded-sm flex flex-col lg:flex-row shadow-2xl overflow-hidden">
-            <div class="lg:w-1/2 p-10 md:p-16 text-left flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 z-10 bg-black/40">
-                <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-4">Capacitación y Empleo</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic text-white leading-tight">Fórmate y Trabaja <br><span class="gold-text-gradient">con Nosotros</span></h3>
-                <p class="text-gray-400 mb-10 text-base font-light leading-relaxed">
-                    ¿Buscas empleo como guardia o necesitas obtener tu certificación OS10? Integra nuestra base de datos operativa para servicios de alta exigencia, o inscríbete en nuestros cursos impartidos por instructores acreditados.
+    <section id="reclutamiento" class="bg-gradient-to-b from-rcr-gray to-rcr-dark overflow-hidden pb-12">
+        <div class="max-w-7xl mx-auto w-full glass-panel rounded-sm flex flex-col lg:flex-row shadow-2xl overflow-hidden border border-white/10 mt-16">
+            <div class="lg:w-1/2 p-10 md:p-16 text-left flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 z-10 bg-black/50">
+                <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-4">Postulaciones & Capacitación</h2>
+                <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic text-white leading-tight">Proyecta tu <br><span class="gold-text-gradient">Carrera Táctica</span></h3>
+                <p class="text-gray-400 mb-10 text-lg font-light italic leading-relaxed">
+                    ¿Buscas empleo certificado o necesitas obtener tu acreditación OS10? Integra nuestra base de datos operativa para eventos masivos o cotiza tu curso de formación impartido por instructores acreditados.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="mailto:rcr.seguridad@gmail.com?subject=Postulación%20CV%20-%20RCR%20Seguridad" class="gold-gradient text-black px-6 py-4 font-black uppercase text-[10px] tracking-widest rounded-sm text-center btn-hover flex items-center justify-center">
-                        <i class="fas fa-file-pdf text-base mr-3"></i> Mándanos tu CV
+                <div class="flex flex-col sm:flex-row gap-5 mt-2">
+                    <a href="mailto:rcr.seguridad@gmail.com?subject=Postulación%20CV%20-%20RCR%20Seguridad" class="gold-gradient text-black px-6 py-4 font-black uppercase text-[10px] tracking-widest rounded-sm text-center flex items-center justify-center btn-hover group">
+                        <i class="fas fa-file-pdf text-base mr-3 group-hover:scale-110 transition-transform"></i> Mándanos tu CV
                     </a>
-                    <a href="https://wa.me/56999158787" class="bg-transparent border border-rcr-gold text-rcr-gold px-6 py-4 font-black uppercase text-[10px] tracking-widest rounded-sm text-center btn-hover hover:bg-rcr-gold hover:text-black flex items-center justify-center transition-colors">
-                        <i class="fab fa-whatsapp text-base mr-3"></i> Consultar por Cursos
+                    <a href="https://wa.me/56999158787" class="bg-transparent border border-rcr-gold text-rcr-gold hover:bg-rcr-gold hover:text-black px-6 py-4 font-black uppercase text-[10px] tracking-widest rounded-sm text-center flex items-center justify-center btn-hover transition-colors group">
+                        <i class="fab fa-whatsapp text-lg mr-3 group-hover:scale-110 transition-transform"></i> Consultar por Cursos
                     </a>
                 </div>
             </div>
             
-            <div class="lg:w-1/2 p-6 bg-black flex items-center justify-center">
-                <div class="carousel-container">
+            <div class="lg:w-1/2 bg-black flex items-center p-8 h-[450px] md:h-[500px] lg:h-auto">
+                <div class="carousel-container aspect-[3/4] max-w-sm mx-auto shadow-2xl">
                     <img src="foto1.png?v=3" class="carousel-slide" alt="Operativo RCR">
                     <img src="foto2.png?v=3" class="carousel-slide" alt="Operativo RCR">
                     <img src="foto3.png?v=3" class="carousel-slide" alt="Operativo RCR">
@@ -163,12 +165,12 @@
         </div>
     </section>
 
-    <section id="ubicacion" class="bg-rcr-dark">
-        <div class="max-w-4xl mx-auto w-full text-center px-6">
-            <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-10">Base Operativa</h2>
-            <div class="glass-panel p-2 rounded-sm h-[450px] relative overflow-hidden shadow-2xl">
+    <section id="ubicacion" class="bg-rcr-dark pb-28 pt-20">
+        <div class="max-w-4xl mx-auto w-full text-center px-4">
+            <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-12">Central de Operaciones</h2>
+            <div class="glass-panel p-2.5 rounded-sm h-[420px] md:h-[500px] relative overflow-hidden shadow-2xl">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.525547604627!2d-71.3744654!3d-33.0426462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d7990119e09d%3A0xc3f8e5860d2b774b!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" class="w-full h-full rounded-sm map-filter" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/95 border border-rcr-gold/30 px-8 py-3 rounded-sm whitespace-nowrap shadow-2xl">
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/95 border border-rcr-gold/30 px-8 py-3.5 rounded-sm whitespace-nowrap shadow-2xl">
                     <p class="text-rcr-gold text-[11px] uppercase tracking-widest font-bold">Buenos Aires 1140, Of. A2</p>
                     <p class="text-gray-400 text-[9px] uppercase tracking-widest mt-1">Villa Alemana, Chile</p>
                 </div>
@@ -176,54 +178,54 @@
         </div>
     </section>
 
-    <section id="contacto" class="bg-black pt-20">
+    <section id="contacto" class="bg-black pt-28 pb-32">
         <div class="max-w-4xl mx-auto w-full px-6">
-            <h2 class="text-4xl md:text-6xl font-black uppercase text-center italic mb-4 text-white">Cotiza con <span class="gold-text-gradient">Nosotros</span></h2>
-            <p class="text-gray-400 text-center mb-12 text-sm max-w-2xl mx-auto font-light">
-                Complete el formulario para solicitar guardias, requerir presupuestos para eventos o recibir información detallada sobre nuestros próximos cursos.
-            </p>
-            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#0a0a0a] p-8 md:p-14 border border-white/10 rounded-sm text-left shadow-2xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-4 text-white">Cotiza con <span class="gold-text-gradient">Nosotros</span></h2>
+                <p class="text-gray-400 mt-4 text-sm md:text-base max-w-2xl mx-auto font-light">Estructure su plan de seguridad operativa. Complete el formulario para solicitar guardias certificados, presupuestos para eventos o información detallada de nuestros cursos OS10 y de drones.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/xeelgkpa" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-7 bg-[#0a0a0a] p-9 md:p-14 border border-white/5 rounded-sm text-left shadow-2xl relative">
+                <div class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-rcr-gold/40 to-transparent"></div>
                 <div class="space-y-2">
-                    <label class="text-[9px] uppercase tracking-widest text-rcr-gold font-bold">Nombre o Entidad Corporativa</label>
+                    <label class="text-[10px] uppercase tracking-widest text-rcr-gold font-semibold ml-1">Nombre o Razón Social</label>
                     <input type="text" name="nombre" class="w-full bg-black border border-white/10 p-4 rounded-sm focus:border-rcr-gold outline-none text-xs text-white transition-colors" required>
                 </div>
                 <div class="space-y-2">
-                    <label class="text-[9px] uppercase tracking-widest text-rcr-gold font-bold">Correo Electrónico</label>
+                    <label class="text-[10px] uppercase tracking-widest text-rcr-gold font-semibold ml-1">Correo Electrónico Operativo</label>
                     <input type="email" name="email" class="w-full bg-black border border-white/10 p-4 rounded-sm focus:border-rcr-gold outline-none text-xs text-white transition-colors" required>
                 </div>
                 <div class="space-y-2 md:col-span-2">
-                    <label class="text-[9px] uppercase tracking-widest text-rcr-gold font-bold">Requerimiento Operativo</label>
-                    <textarea name="mensaje" placeholder="Indique si requiere guardias, drones o información de cursos..." class="w-full bg-black border border-white/10 p-4 rounded-sm focus:border-rcr-gold outline-none text-xs text-white h-32 resize-none transition-colors" required></textarea>
+                    <label class="text-[10px] uppercase tracking-widest text-rcr-gold font-semibold ml-1">Requerimiento de Servicio</label>
+                    <textarea name="mensaje" placeholder="Indique si requiere guardias OS10, drones o información de cursos..." class="w-full bg-black border border-white/10 p-4 rounded-sm focus:border-rcr-gold outline-none text-xs text-white h-36 resize-none transition-colors" required></textarea>
                 </div>
-                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 mt-4 rounded-sm uppercase tracking-[0.4em] text-[11px] btn-hover">
+                <button type="submit" class="md:col-span-2 gold-gradient text-black font-black py-5 mt-3 rounded-sm uppercase tracking-[0.4em] text-[11px] btn-hover">
                     Enviar Requerimiento
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="py-16 bg-black border-t border-white/10">
+    <footer class="py-16 bg-black border-t border-white/5 pb-24">
         <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
             
-            <div class="mb-8 text-center max-w-3xl">
-                <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-3">
-                    © 2026 RCR Seguridad Privada SpA · Chile
+            <div class="mb-10 text-center max-w-4xl">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold mb-4">
+                    © 2026 RCR Seguridad Privada SpA · Región de Valparaíso
                 </p>
-                <p class="text-[8px] text-gray-600 uppercase tracking-widest leading-relaxed">
-                    Empresa acreditada y regulada por el Departamento OS10 de Carabineros de Chile. Los servicios de formación, capacitación y despliegue de guardias de seguridad privada se rigen estrictamente bajo el Decreto Ley N° 3.607 y normativas vigentes.
+                <p class="text-[9px] text-gray-700 uppercase tracking-widest leading-relaxed">
+                    Empresa acreditada y regulada por el Departamento OS10 de Carabineros de Chile. Los servicios de formación, capacitación y despliegue de guardias de seguridad privada se rigen estrictamente bajo el Decreto Ley N° 3.607, la Ley de Seguridad Privada y normativas vigentes.
                 </p>
             </div>
 
-            <div class="flex flex-col items-center group mt-6">
-                <span class="text-[7px] text-gray-700 uppercase tracking-[0.5em] mb-4 font-bold">Desarrollo Tecnológico</span>
-                <a href="mailto:kitsu.devworks@gmail.com" class="btn-hover">
-                    <img src="KitsuLogo2.png" alt="KitsuDev" class="h-10 w-auto grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                </a>
+            <div class="flex flex-col items-center group mt-4">
+                <span class="text-[7px] text-gray-800 uppercase tracking-[0.5em] mb-5 font-bold">Desarrollo Tecnológico</span>
+                <a href="mailto:kitsu.devworks@gmail.com?subject=Consulta%20por%20Servicios%20Web"><img src="KitsuLogo2.png" alt="KitsuDevWorks" class="h-10 w-auto grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 hover:scale-105"></a>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/56999158787" class="fixed bottom-8 right-8 gold-gradient text-black w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_0_20px_rgba(181,148,88,0.4)] z-50 animate-pulse-gold btn-hover">
+    <a href="https://wa.me/56999158787" class="fixed bottom-10 right-10 gold-gradient text-black w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_0_25px_rgba(181,148,88,0.5)] z-50 animate-pulse-gold btn-hover transition-transform hover:scale-110">
         <i class="fab fa-whatsapp"></i>
     </a>
 
