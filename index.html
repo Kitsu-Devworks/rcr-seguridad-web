@@ -33,19 +33,20 @@
     <style>
         body { background-color: #070707 !important; }
         
-        /* CSS PURO PARA EL SCROLL - Sin fallos */
+        /* CONTROL LÓGICO DE SCROLL */
         html { scroll-behavior: smooth; }
         
+        /* 1. Secciones normales: Paran 30px por debajo de la barra */
         #quienes-somos, #servicios, #contacto {
-            scroll-margin-top: 110px !important;
+            scroll-margin-top: 110px;
         }
         
-        /* Frena mucho más arriba específicamente para estas dos secciones */
+        /* 2. Secciones modificadas: Paran a ras de la barra (80px de barra + 5px extra) */
         #reclutamiento, #ubicacion {
-            scroll-margin-top: 160px !important; 
+            scroll-margin-top: 85px; 
         }
 
-        /* ESPACIADO RESTAURADO */
+        /* Espaciado estructural restaurado (no tocar para mantener diseño) */
         section { 
             display: flex; 
             flex-direction: column; 
@@ -63,7 +64,7 @@
         .glass-panel { background: rgba(17, 17, 17, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(181, 148, 88, 0.15); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); }
         .map-filter { filter: grayscale(100%) invert(95%) contrast(110%); }
 
-        /* Efecto Oro Metálico Realista para Botones */
+        /* Botones Metálicos */
         .gold-button { 
             background: linear-gradient(135deg, #e5c370 0%, #b58428 25%, #fceeae 50%, #8a5f12 75%, #fceeae 100%);
             background-size: 200% auto;
@@ -211,10 +212,10 @@
             
             <div class="lg:w-1/2 p-6 md:p-10 bg-black flex items-center justify-center">
                 <div class="carousel-container">
-                    <img src="foto1.png?v=13" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto2.png?v=13" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto3.png?v=13" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto4.png?v=13" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto1.png?v=14" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto2.png?v=14" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto3.png?v=14" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto4.png?v=14" class="carousel-slide" alt="Operativo RCR">
                 </div>
             </div>
         </div>
