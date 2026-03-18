@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth scroll-pt-[110px]">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
     <style>
         body { background-color: #070707 !important; }
         
-        /* ESPACIADO RESTAURADO: Le devuelve el "aire" a cada sección sin juntarlas */
+        /* ESPACIADO RESTAURADO: Mantiene la distancia visual entre secciones intacta */
         section { 
             display: flex; 
             flex-direction: column; 
@@ -142,8 +142,8 @@
         </div>
     </header>
 
-    <section id="quienes-somos" class="bg-gradient-to-b from-rcr-dark to-rcr-gray">
-        <div class="max-w-4xl mx-auto w-full text-center">
+    <section class="bg-gradient-to-b from-rcr-dark to-rcr-gray">
+        <div id="quienes-somos" class="max-w-4xl mx-auto w-full text-center scroll-mt-[110px]">
             <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Liderazgo Institucional</h2>
             <h3 class="text-3xl md:text-5xl font-black uppercase mb-10 text-white">Compromiso <span class="gold-text-gradient">con la Excelencia</span></h3>
             <div class="glass-panel p-9 md:p-14 border-l-4 border-l-rcr-gold text-left rounded-sm shadow-xl">
@@ -154,8 +154,8 @@
         </div>
     </section>
 
-    <section id="servicios" class="bg-rcr-gray">
-        <div class="max-w-7xl mx-auto w-full">
+    <section class="bg-rcr-gray">
+        <div id="servicios" class="max-w-7xl mx-auto w-full scroll-mt-[110px]">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-5xl font-black uppercase text-white">Líneas de <span class="gold-text-gradient">Servicio Operativo</span></h2>
             </div>
@@ -179,8 +179,8 @@
         </div>
     </section>
 
-    <section id="reclutamiento" class="bg-gradient-to-b from-rcr-gray to-rcr-dark">
-        <div class="max-w-7xl mx-auto w-full glass-panel rounded-sm flex flex-col lg:flex-row shadow-2xl overflow-hidden border border-white/10">
+    <section class="bg-gradient-to-b from-rcr-gray to-rcr-dark">
+        <div id="reclutamiento" class="max-w-7xl mx-auto w-full glass-panel rounded-sm flex flex-col lg:flex-row shadow-2xl overflow-hidden border border-white/10 scroll-mt-[110px]">
             <div class="lg:w-1/2 p-8 md:p-16 text-left flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-white/10 z-10 bg-black/40">
                 <h2 class="text-rcr-gold font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Capacitación y Empleo</h2>
                 <h3 class="text-4xl md:text-5xl font-black mb-6 uppercase italic text-white leading-tight">Fórmate y Trabaja <br><span class="gold-text-gradient">con Nosotros</span></h3>
@@ -199,17 +199,17 @@
             
             <div class="lg:w-1/2 p-6 md:p-10 bg-black flex items-center justify-center">
                 <div class="carousel-container">
-                    <img src="foto1.png?v=10" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto2.png?v=10" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto3.png?v=10" class="carousel-slide" alt="Operativo RCR">
-                    <img src="foto4.png?v=10" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto1.png?v=11" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto2.png?v=11" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto3.png?v=11" class="carousel-slide" alt="Operativo RCR">
+                    <img src="foto4.png?v=11" class="carousel-slide" alt="Operativo RCR">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="ubicacion" class="bg-rcr-dark">
-        <div class="max-w-4xl mx-auto w-full text-center">
+    <section class="bg-rcr-dark">
+        <div id="ubicacion" class="max-w-4xl mx-auto w-full text-center scroll-mt-[110px]">
             <h2 class="text-rcr-gold font-bold tracking-[0.5em] uppercase text-[10px] mb-12">Central de Operaciones</h2>
             <div class="glass-panel p-2.5 rounded-sm h-[450px] md:h-[500px] relative overflow-hidden shadow-2xl">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.525547604627!2d-71.3744654!3d-33.0426462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d7990119e09d%3A0xc3f8e5860d2b774b!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" class="w-full h-full rounded-sm map-filter" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -221,8 +221,8 @@
         </div>
     </section>
 
-    <section id="contacto" class="bg-black">
-        <div class="max-w-4xl mx-auto w-full">
+    <section class="bg-black">
+        <div id="contacto" class="max-w-4xl mx-auto w-full scroll-mt-[110px]">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-6xl font-black uppercase italic mb-4 text-white">Cotiza con <span class="gold-text-gradient">Nosotros</span></h2>
                 <p class="text-gray-400 mt-4 text-sm md:text-base max-w-2xl mx-auto font-light">Estructure su plan de seguridad operativa. Complete el formulario para solicitar guardias certificados, presupuestos para eventos o información detallada de nuestros cursos OS10 y de drones.</p>
