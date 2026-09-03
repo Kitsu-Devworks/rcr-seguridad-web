@@ -34,10 +34,16 @@
         }
     </script>
     <style>
-        section { scroll-margin-top: 80px; }
-        .bg-grid-pattern { background-size: 24px 24px; }
+        /* Offset de scroll dinámico: compensa los 80px de la barra + aire vertical para centrado */
+        section { 
+            scroll-margin-top: calc(80px + 6vh); 
+        }
+
+        .bg-grid-pattern { 
+            background-size: 24px 24px; 
+        }
         
-        /* Transición suave para el carrusel de imágenes */
+        /* Transición de diapositivas del carrusel */
         .carousel-slide {
             opacity: 0;
             transition: opacity 0.8s ease-in-out;
@@ -84,8 +90,8 @@
         </div>
     </header>
 
-    <!-- HERO SECTION DE IMPACTO -->
-    <section id="inicio" class="relative pt-32 pb-24 md:pt-44 md:pb-36 bg-rcr-dark overflow-hidden border-b border-rcr-border bg-tactical-grid bg-grid-pattern">
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-rcr-dark overflow-hidden border-b border-rcr-border bg-tactical-grid bg-grid-pattern">
         <!-- Iluminación ambiental de fondo -->
         <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-rcr-gold/10 blur-[120px] rounded-full pointer-events-none"></div>
         
@@ -150,7 +156,7 @@
     </section>
 
     <!-- SECCIÓN EMPRESA -->
-    <section id="empresa" class="py-24 bg-rcr-black border-b border-rcr-border">
+    <section id="empresa" class="py-16 md:py-24 bg-rcr-black border-b border-rcr-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
@@ -175,8 +181,8 @@
         </div>
     </section>
 
-    <!-- SECCIÓN SERVICIOS REALES (3 PILARES) -->
-    <section id="servicios" class="py-24 bg-rcr-dark border-b border-rcr-border">
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-16 md:py-24 bg-rcr-dark border-b border-rcr-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-rcr-gold text-xs font-bold uppercase tracking-widest block mb-2">Líneas de Servicio Operativo</span>
@@ -238,7 +244,7 @@
     </section>
 
     <!-- RECLUTAMIENTO Y CARRUSEL OPERATIVO -->
-    <section id="empleo" class="py-24 bg-rcr-black border-b border-rcr-border">
+    <section id="empleo" class="py-16 md:py-24 bg-rcr-black border-b border-rcr-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-rcr-card rounded-2xl border border-rcr-border overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-center">
                 
@@ -264,7 +270,6 @@
                 <!-- Carrusel Dinámico (5 Fotos Mantenidas) -->
                 <div class="lg:col-span-5 p-6 bg-black flex items-center justify-center border-t lg:border-t-0 lg:border-l border-rcr-border">
                     <div class="relative aspect-square w-full max-w-[420px] rounded-xl overflow-hidden border-2 border-rcr-gold/40 shadow-2xl">
-                        <!-- Mantiene parámetros e imágenes originales -->
                         <img src="foto1.png?v=17" alt="Operativo RCR" class="carousel-slide active w-full h-full object-cover">
                         <img src="foto2.png?v=17" alt="Operativo RCR" class="carousel-slide w-full h-full object-cover">
                         <img src="foto3.png?v=17" alt="Operativo RCR" class="carousel-slide w-full h-full object-cover">
@@ -283,7 +288,7 @@
     </section>
 
     <!-- UBICACIÓN CENTRAL -->
-    <section id="ubicacion" class="py-24 bg-rcr-dark border-b border-rcr-border">
+    <section id="ubicacion" class="py-16 md:py-24 bg-rcr-dark border-b border-rcr-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-rcr-gold text-xs font-bold uppercase tracking-widest block mb-2">Presencia Regional</span>
             <h2 class="text-3xl font-extrabold text-white tracking-tight mb-12">Central de Operaciones</h2>
@@ -299,8 +304,8 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONTACTO/COTIZACIÓN -->
-    <section id="contacto" class="py-24 bg-rcr-black">
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-16 md:py-24 bg-rcr-black">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-5xl font-black uppercase italic text-white mb-4">
@@ -366,7 +371,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT DE TRANSICIÓN SUAVE PARA EL CARRUSEL -->
+    <!-- SCRIPT CARRUSEL -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.carousel-slide');
