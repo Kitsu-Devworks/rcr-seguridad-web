@@ -1,250 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- RCR landing · build v18 · 2026-11-20 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-SFpYAIT+qAZAPeMk5CBigS+mUpGB4mmRqrAVrSMqtV4='; style-src 'sha256-DsyMKGE87V41bfmoJvVyEGEqK8WLAXTX2QHqDTApiAg=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
-<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; frame-src https://www.google.com; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<!-- RCR landing · build v19 -->
 <meta name="description" content="RCR Seguridad Privada SpA: guardias acreditados para instalaciones y eventos, asesorías en seguridad y vigilancia con drones en la Región de Valparaíso.">
 <meta name="theme-color" content="#070709">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RCR Seguridad Privada SpA">
+<meta property="og:description" content="Guardias acreditados, asesorías y vigilancia con drones en la Región de Valparaíso.">
+<meta property="og:image" content="https://rcrseguridad.cl/media/og.jpg">
 <title>RCR Seguridad Privada SpA | Guardias, asesorías y drones en Valparaíso</title>
 <link rel="icon" type="image/png" href="logo-modified.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap">
-<style>
-:root{--bg:#070709;--bg2:#0d0d12;--card:#121218;--line:#22222e;--gold:#d1ab62;--gold-l:#f4deaa;--gold-d:#8a6d35;--tx:#d4d4d8;--mut:#9a9aa6;--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.22,.61,.36,1)}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-section[id]{scroll-margin-top:76px}
-::selection{background:var(--gold);color:#000}
-:focus-visible{outline:2px solid var(--gold-l);outline-offset:3px;border-radius:2px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 1.25rem}
-@media(min-width:768px){.wrap{padding:0 2rem}}
-h1,h2,h3{font-family:var(--serif);font-weight:400;color:#fff;margin:0;letter-spacing:-.01em}
-h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.15}
-.hl{font-weight:600;color:#fff}.mt{margin-top:1rem}.mt2{margin-top:2rem}
-.lead{font-size:1.0625rem;color:var(--mut);max-width:58ch}
-
-/* Cabecera */
-header{position:fixed;inset:0 0 auto;z-index:50;height:72px;background:rgba(7,7,9,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
-header.scrolled{border-bottom-color:var(--line)}
-.bar{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.brand{display:flex;align-items:center;gap:.8rem}
-.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(181,148,88,.5)}
-.brand b{display:block;font:600 1.2rem/1 var(--serif);color:#fff;letter-spacing:.04em}
-.brand small{display:block;font-size:.72rem;color:var(--gold);margin-top:3px}
-nav ul{list-style:none;margin:0;padding:0;display:none;gap:2rem}
-nav a.l{position:relative;font-size:.9rem;color:var(--mut);padding:.4rem 0;transition:color .25s}
-nav a.l::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
-nav a.l:hover,nav a.l:focus-visible{color:#fff}
-nav a.l:hover::after,nav a.l:focus-visible::after{transform:scaleX(1)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 .9rem/1 var(--sans);padding:.95rem 1.4rem;border-radius:3px;border:1px solid var(--gold);transition:background .25s,color .25s,transform .25s var(--ease),border-color .25s}
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0)}
-.btn-gold{background:var(--gold);color:#0a0a0a}
-.btn-gold:hover{background:var(--gold-l);border-color:var(--gold-l)}
-.btn-line{color:var(--gold-l);background:transparent}
-.btn-line:hover{background:rgba(181,148,88,.12)}
-.hcta{display:none;padding:.7rem 1.1rem}
-.burger{width:44px;height:44px;background:none;border:0;color:#fff;cursor:pointer;display:grid;place-items:center}
-.burger span{display:block;width:22px;height:2px;background:currentColor;position:relative;transition:background .2s}
-.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:2px;background:currentColor;transition:transform .3s var(--ease)}
-.burger span::before{top:-7px}.burger span::after{top:7px}
-.burger[aria-expanded="true"] span{background:transparent}
-.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
-.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
-.panel{position:absolute;top:72px;left:0;right:0;background:rgba(7,7,9,.97);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.5rem;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s .3s}
-.panel.open{opacity:1;visibility:visible;transform:none;transition-delay:0s}
-.panel a{display:block;padding:1rem 0;border-bottom:1px solid var(--line);font-size:1.05rem}
-.panel a.btn{margin-top:1.2rem;border:1px solid var(--gold);text-align:center;justify-content:center}
-@media(min-width:900px){nav ul{display:flex}.hcta{display:inline-flex}.burger,.panel{display:none}}
-
-/* Hero */
-.hero{padding:8.5rem 0 4.5rem;background:var(--bg2);border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;gap:3rem;align-items:center}
-@media(min-width:960px){.hero .wrap{grid-template-columns:1.15fr .85fr;gap:4.5rem}.hero{padding:10rem 0 6rem}}
-.hero h1{font-size:clamp(2.3rem,5.2vw,4rem);line-height:1.08;margin-bottom:1.5rem;max-width:17ch}
-.hero .lead{margin-bottom:2.2rem}
-.acts{display:flex;flex-wrap:wrap;gap:.9rem}
-.acts .btn{flex:1 1 auto}
-@media(min-width:520px){.acts .btn{flex:0 0 auto}}
-.norm{margin:2.8rem 0 0;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.4rem 2rem;font-size:.85rem;color:var(--mut)}
-.norm strong{color:var(--gold-l);font-weight:500}
-.rise{opacity:0;transform:translateY(14px);animation:rise .9s var(--ease) forwards}
-.rise.b{animation-delay:.12s}.rise.c{animation-delay:.24s}.rise.d{animation-delay:.36s}.rise.e{animation-delay:.5s}
-@keyframes rise{to{opacity:1;transform:none}}
-
-/* Carrusel */
-.shot{position:relative;aspect-ratio:4/5;max-width:440px;margin-inline:auto;width:100%;background:#000;border:1px solid rgba(181,148,88,.4);border-radius:4px;overflow:hidden}
-.shot img.s{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.07);transition:opacity 1.1s ease,transform 7s linear}
-.shot img.s.on{opacity:1;transform:scale(1)}
-.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 40%);pointer-events:none}
-.dots{position:absolute;left:1rem;right:1rem;bottom:.9rem;z-index:2;display:flex;align-items:center;gap:.2rem}
-.dots button{width:28px;height:28px;padding:0;background:none;border:0;cursor:pointer;display:grid;place-items:center}
-.dots button::before{content:"";width:18px;height:2px;background:rgba(255,255,255,.35);transition:background .3s,width .4s var(--ease)}
-.dots button[aria-current="true"]::before{background:var(--gold-l);width:28px}
-.dots span{margin-left:auto;font-size:.8rem;color:var(--gold-l)}
-
-/* Secciones */
-.sec{padding:4.5rem 0;border-bottom:1px solid var(--line)}
-@media(min-width:768px){.sec{padding:7rem 0}}
-.sec.alt{background:var(--bg2)}
-.two{display:grid;gap:2.5rem}
-@media(min-width:900px){.two{grid-template-columns:5fr 7fr;gap:5rem}}
-.facts{margin:2rem 0 0;display:grid;gap:0}
-.facts div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid var(--line)}
-.facts div:last-child{border-bottom:1px solid var(--line)}
-.facts dt{color:var(--mut);font-size:.9rem}
-.facts dd{margin:0;color:#fff}
-.svc{list-style:none;margin:0;padding:0}
-.svc li{display:grid;gap:.6rem 3rem;padding:2rem 0;border-top:1px solid var(--line);transition:border-color .35s}
-.svc li:last-child{border-bottom:1px solid var(--line)}
-.svc li:hover{border-top-color:var(--gold)}
-@media(min-width:820px){.svc li{grid-template-columns:5fr 5fr 2fr;align-items:start}}
-.svc h3{font-size:1.45rem;line-height:1.25}
-.svc p{margin:0;color:var(--mut);max-width:48ch}
-.svc a{color:var(--gold-l);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(181,148,88,.4);justify-self:start;transition:border-color .25s,color .25s}
-.svc a:hover{color:#fff;border-color:var(--gold-l)}
-@media(min-width:820px){.svc a{justify-self:end}}
-.head{max-width:44rem;margin-bottom:3rem}
-
-/* Ubicación */
-.map{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--card)}
-.map iframe{display:block;width:100%;height:340px;border:0;filter:grayscale(.85) contrast(.95) brightness(.9);transition:filter .5s}
-.map:hover iframe{filter:grayscale(.2) brightness(1)}
-@media(min-width:768px){.map iframe{height:440px}}
-.addr{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 1.4rem;border-top:1px solid var(--line)}
-.addr p{margin:0;color:#fff}
-.addr small{display:block;color:var(--mut);font-size:.9rem}
-.addr a{color:var(--gold-l);font-weight:500;border-bottom:1px solid rgba(181,148,88,.4)}
-.addr a:hover{color:#fff}
-
-/* Contacto */
-.chan{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;margin-top:3rem}
-@media(min-width:768px){.chan{grid-template-columns:1fr 1fr}}
-.chan a{display:flex;flex-direction:column;gap:.35rem;padding:2rem 1.6rem;background:var(--card);transition:background .3s}
-.chan a:hover,.chan a:focus-visible{background:#181821}
-.chan small{color:var(--mut);font-size:.9rem}
-.chan strong{font:400 1.5rem/1.3 var(--serif);color:#fff;overflow-wrap:anywhere}
-.chan span{color:var(--gold-l);font-size:.9rem;margin-top:.6rem}
-
-footer{padding:3.5rem 0;background:#000;text-align:center;font-size:.85rem;color:var(--mut)}
-footer p{margin:0 0 .6rem}
-footer .legal{color:#71717a;font-size:.8rem;max-width:60ch;margin-inline:auto}
-.dev{margin-top:2.2rem;display:inline-flex;flex-direction:column;align-items:center;gap:.6rem;color:#71717a;font-size:.75rem}
-.dev img{height:30px;width:auto;filter:grayscale(1);opacity:.45;transition:filter .3s,opacity .3s}
-.dev:hover img,.dev:focus-visible img{filter:none;opacity:1}
-
-.wa{position:fixed;right:1.2rem;bottom:1.2rem;z-index:60;width:54px;height:54px;border-radius:50%;background:var(--gold);color:#0a0a0a;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.5);transition:transform .3s var(--ease),background .25s}
-.wa:hover{transform:scale(1.08);background:var(--gold-l)}
-.wa svg{width:26px;height:26px;fill:currentColor}
-
-/* Revelado al hacer scroll (solo con JS activo) */
-.js [data-r]{opacity:0;transform:translateY(10px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.js [data-r].in{opacity:1;transform:none}
-.js [data-r="2"]{transition-delay:.1s}.js [data-r="3"]{transition-delay:.2s}
-
-
-/* v18: más brillo y contraste */
-.hero{position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;width:720px;height:720px;right:-220px;top:-260px;background:radial-gradient(circle,rgba(209,171,98,.22),transparent 65%);pointer-events:none}
-.hero .wrap{position:relative}
-.hero h1{font-weight:600}
-.shot{border-color:var(--gold);box-shadow:14px 14px 0 var(--gold)}
-@media(max-width:520px){.shot{box-shadow:10px 10px 0 var(--gold);width:calc(100% - 10px);margin-left:0}}
-.btn-gold{position:relative;overflow:hidden}
-.btn-gold::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:rgba(255,255,255,.5);transform:skewX(-20deg);transition:left .7s var(--ease);pointer-events:none}
-.btn-gold:hover::after{left:130%}
-.svc li:hover h3{color:var(--gold-l)}
-.chan a:hover,.chan a:focus-visible{background:var(--gold)}
-.chan a:hover small,.chan a:hover strong,.chan a:hover span,.chan a:focus-visible small,.chan a:focus-visible strong,.chan a:focus-visible span{color:#0a0a0a}
-#empleo{background:var(--gold);border-bottom-color:var(--gold-d)}
-#empleo h2{color:#0a0a0c}
-#empleo .lead{color:#2a2110}
-#empleo .btn-gold{background:#0a0a0c;color:var(--gold-l);border-color:#0a0a0c}
-#empleo .btn-gold:hover{background:#000}
-#empleo .btn-gold::after{display:none}
-#empleo .btn-line{color:#0a0a0c;border-color:#0a0a0c}
-#empleo .btn-line:hover{background:rgba(0,0,0,.1)}
-#empleo :focus-visible{outline-color:#000}
-@media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
-.rise{opacity:1;transform:none}
-.shot img.s{transform:none}
-}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=19">
 </head>
 <body>
-
 <header id="top">
   <div class="wrap bar">
     <a href="#inicio" class="brand" aria-label="RCR Seguridad Privada, inicio">
       <img src="logo-modified.png" alt="Logo RCR" width="44" height="44">
       <span><b>RCR</b><small>Seguridad Privada</small></span>
     </a>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a class="l" href="#empresa">Empresa</a></li>
-        <li><a class="l" href="#servicios">Servicios</a></li>
-        <li><a class="l" href="#empleo">Empleo</a></li>
-        <li><a class="l" href="#ubicacion">Ubicación</a></li>
-      </ul>
-    </nav>
+    <nav aria-label="Principal"><ul>
+      <li><a class="l" href="#empresa">Empresa</a></li>
+      <li><a class="l" href="#servicios">Servicios</a></li>
+      <li><a class="l" href="#empleo">Empleo</a></li>
+      <li><a class="l" href="#ubicacion">Ubicación</a></li>
+    </ul></nav>
     <a class="btn btn-gold hcta" href="#contacto">Contáctanos</a>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="panel" aria-label="Abrir menú"><span></span></button>
   </div>
   <div class="panel" id="panel">
-    <a href="#empresa">Empresa</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#empleo">Empleo</a>
-    <a href="#ubicacion">Ubicación</a>
+    <a href="#empresa">Empresa</a><a href="#servicios">Servicios</a><a href="#empleo">Empleo</a><a href="#ubicacion">Ubicación</a>
     <a class="btn btn-gold" href="#contacto">Contáctanos</a>
   </div>
 </header>
 
 <main>
 <section id="inicio" class="hero">
+  <video class="bgv" id="vhero" data-src="media/guardia.mp4" data-m="media/guardia-m.mp4" poster="media/guardia.jpg" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>
   <div class="wrap">
-    <div>
-      <h1 class="rise">Seguridad privada para instalaciones y eventos en la Región de Valparaíso.</h1>
-      <p class="lead rise b">Guardias acreditados, asesorías en seguridad bajo la normativa vigente y vigilancia aérea con drones. Atendemos desde Villa Alemana.</p>
-      <div class="acts rise c">
-        <a class="btn btn-gold" href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
-        <a class="btn btn-line" href="#servicios">Ver servicios</a>
-      </div>
-      <p class="norm rise d"><span>Marco normativo: <strong>Ley N° 21.659</strong></span><span><strong>Decreto Ley N° 3.607</strong></span></p>
+    <h1><span class="ln"><span>Seguridad en tierra</span></span><span class="ln"><span>y desde el aire</span></span></h1>
+    <p class="lead fade f1">Guardias acreditados para instalaciones y eventos, asesorías bajo la normativa vigente y vigilancia con drones. Región de Valparaíso.</p>
+    <div class="acts fade f2">
+      <a class="btn btn-gold" href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+      <a class="btn btn-line" href="#servicios">Ver servicios</a>
     </div>
-    <div class="rise e">
-      <div class="shot" id="shot" role="group" aria-roledescription="carrusel" aria-label="Personal operativo de RCR">
-        <img class="s on" src="foto1.png?v=18" alt="Personal operativo de RCR en despliegue" width="840" height="1050">
-        <img class="s" src="foto2.png?v=18" alt="Personal operativo de RCR en servicio" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto3.png?v=18" alt="Equipo de RCR en terreno" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto4.png?v=18" alt="Guardias de RCR en instalaciones" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto5.png?v=18" alt="Operativo de RCR en evento" width="840" height="1050" loading="lazy">
-        <div class="dots" id="dots"><span id="cap">Despliegue RCR</span></div>
-      </div>
-    </div>
+    <p class="norm fade f2"><span>Marco normativo: <strong>Ley N° 21.659</strong></span><span><strong>Decreto Ley N° 3.607</strong></span></p>
   </div>
 </section>
 
+<div class="mq" aria-hidden="true"><div class="tr"><ul>
+  <li>Control de acceso</li><li>Eventos masivos</li><li>Vigilancia con drones</li><li>Asesorías en seguridad</li><li>Región de Valparaíso</li>
+</ul></div></div>
+
 <section id="empresa" class="sec">
   <div class="wrap two">
+    <div class="plate" data-r><img src="media/logo-rcr.png" alt="Logo de RCR Seguridad Privada SpA" width="420" height="420" loading="lazy"></div>
     <div data-r>
-      <h2>Protección con respaldo normativo y control operativo.</h2>
-    </div>
-    <div data-r="2">
-      <p class="lead"><strong class="hl">RCR Seguridad Privada SpA</strong> presta servicios de protección en la Región de Valparaíso, ajustados a la normativa vigente de seguridad privada.</p>
-      <p class="lead mt">Combinamos personal capacitado para instalaciones críticas y eventos masivos con vigilancia aérea mediante drones, y asesoramos a empresas en la protección de sus instalaciones.</p>
+      <h2>Protección con respaldo normativo y control operativo</h2>
+      <p class="lead mt"><span class="hl">RCR Seguridad Privada SpA</span> presta servicios de protección en la Región de Valparaíso, ajustados a la normativa vigente de seguridad privada.</p>
+      <p class="lead">Combinamos personal capacitado para instalaciones críticas y eventos masivos con vigilancia aérea mediante drones, y asesoramos a empresas en la protección de sus instalaciones.</p>
       <dl class="facts">
         <div><dt>Cobertura</dt><dd>Región de Valparaíso</dd></div>
-        <div><dt>Servicios</dt><dd>Guardias, asesorías, vigilancia con drones</dd></div>
-        <div><dt>Normativa</dt><dd>Ley N° 21.659 y Decreto Ley N° 3.607</dd></div>
+        <div><dt>Servicios</dt><dd>Guardias, asesorías, drones</dd></div>
+        <div><dt>Normativa</dt><dd>Ley N° 21.659 y D.L. N° 3.607</dd></div>
       </dl>
     </div>
   </div>
@@ -252,76 +76,62 @@ html{scroll-behavior:auto}
 
 <section id="servicios" class="sec alt">
   <div class="wrap">
-    <div class="head" data-r>
-      <h2>Qué podemos hacer por su instalación o evento.</h2>
-    </div>
+    <div class="head" data-r><h2>Qué podemos hacer por su instalación o evento</h2></div>
     <ul class="svc">
-      <li data-r>
-        <h3>Guardias para eventos e instalaciones</h3>
-        <p>Personal acreditado con contratación inmediata para control de acceso, disuasión y resguardo.</p>
-        <a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Solicitar personal</a>
-      </li>
-      <li data-r>
-        <h3>Asesorías en seguridad</h3>
-        <p>Evaluamos las vulnerabilidades de su empresa o instalación y definimos un plan de protección.</p>
-        <a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Consultar por una asesoría</a>
-      </li>
-      <li data-r>
-        <h3>Vigilancia con drones</h3>
-        <p>Monitoreo perimetral y patrullaje aéreo para cubrir superficies amplias con menos puntos ciegos.</p>
-        <a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Cotizar vigilancia aérea</a>
-      </li>
+      <li data-r><h3>Guardias para eventos e instalaciones</h3><p>Personal acreditado con contratación inmediata para control de acceso, disuasión y resguardo.</p><a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Solicitar personal</a></li>
+      <li data-r><h3>Asesorías en seguridad</h3><p>Evaluamos las vulnerabilidades de su empresa o instalación y definimos un plan de protección.</p><a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Consultar asesoría</a></li>
+      <li data-r><h3>Vigilancia con drones</h3><p>Monitoreo perimetral y patrullaje aéreo para cubrir superficies amplias con menos puntos ciegos.</p><a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Cotizar vigilancia</a></li>
     </ul>
   </div>
 </section>
 
-<section id="empleo" class="sec">
+<section class="band" aria-labelledby="aereo">
+  <video class="bgv" id="vdron" data-src="media/dron.mp4" data-m="media/dron-m.mp4" poster="media/dron.jpg" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+  <div class="wrap" data-r>
+    <h2 id="aereo">Vigilancia<br>aérea</h2>
+    <p class="lead">Un dron cubre en minutos lo que a pie toma mucho más. Lo usamos para patrullaje, monitoreo perimetral y control de grandes recintos.</p>
+    <p class="cap">Imágenes captadas en la Quinta Vergara.</p>
+  </div>
+</section>
+
+<section id="empleo" class="sec gold">
   <div class="wrap two">
     <div data-r>
-      <h2>¿Es guardia acreditado? Súmese a nuestra base operativa.</h2>
-    </div>
-    <div data-r="2">
-      <p class="lead">Si tiene su acreditación de seguridad al día, envíe su currículum y lo consideraremos para instalaciones y eventos.</p>
-      <div class="acts mt2">
-        <a class="btn btn-gold" href="mailto:rcr.seguridad@gmail.com?subject=Postulación%20CV%20-%20RCR%20Seguridad">Enviar currículum</a>
+      <h2>¿Es guardia acreditado? Súmese a nuestro equipo</h2>
+      <p class="lead mt">Si tiene su acreditación de seguridad al día, envíe su currículum y lo consideraremos para instalaciones y eventos.</p>
+      <div class="acts mt">
+        <a class="btn btn-gold" href="#contacto" data-mail="rcr" data-subject="Postulación CV - RCR Seguridad">Enviar currículum</a>
         <a class="btn btn-line" href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
       </div>
+    </div>
+    <div class="shot" id="shot" data-r role="group" aria-roledescription="carrusel" aria-label="Personal operativo de RCR">
+      <img class="on" src="foto1.png?v=19" alt="Personal operativo de RCR en despliegue" width="840" height="1050">
+      <img src="foto2.png?v=19" alt="Personal operativo de RCR en servicio" width="840" height="1050" loading="lazy">
+      <img src="foto3.png?v=19" alt="Equipo de RCR en terreno" width="840" height="1050" loading="lazy">
+      <img src="foto4.png?v=19" alt="Guardias de RCR en instalaciones" width="840" height="1050" loading="lazy">
+      <img src="foto5.png?v=19" alt="Operativo de RCR en evento" width="840" height="1050" loading="lazy">
+      <div class="dots" id="dots"><span id="cap">Despliegue RCR</span></div>
     </div>
   </div>
 </section>
 
 <section id="ubicacion" class="sec alt">
   <div class="wrap">
-    <div class="head" data-r>
-      <h2>Central de operaciones en Villa Alemana.</h2>
-    </div>
-    <div class="map" data-r="2">
+    <div class="head" data-r><h2>Central de operaciones en Villa Alemana</h2></div>
+    <div class="map" data-r>
       <iframe title="Mapa de la central de operaciones de RCR en Buenos Aires 1140, Villa Alemana" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.525547604627!2d-71.3744654!3d-33.0426462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d7990119e09d%3A0xc3f8e5860d2b774b!2sBuenos%20Aires%201140%2C%20Villa%20Alemana%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1700000000000!5m2!1ses-419!2scl" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="addr">
-        <p>Buenos Aires 1140, Of. A2<small>Villa Alemana, Valparaíso</small></p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Buenos+Aires+1140+Villa+Alemana+Valpara%C3%ADso" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
-      </div>
+      <div class="addr"><p>Buenos Aires 1140, Of. A2<small>Villa Alemana, Valparaíso</small></p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Buenos+Aires+1140+Villa+Alemana+Valpara%C3%ADso" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a></div>
     </div>
   </div>
 </section>
 
 <section id="contacto" class="sec">
   <div class="wrap">
-    <div class="head" data-r>
-      <h2>Cuéntenos qué necesita y le respondemos directamente.</h2>
-      <p class="lead mt">Para cotizar guardias, asesorías o vigilancia con drones, escríbanos por WhatsApp o correo.</p>
-    </div>
-    <div class="chan" data-r="2">
-      <a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer">
-        <small>WhatsApp</small>
-        <strong>+56 9 5156 4828</strong>
-        <span>Respuesta más rápida</span>
-      </a>
-      <a href="mailto:rcr.seguridad@gmail.com?subject=Solicitud%20de%20cotizaci%C3%B3n%20-%20RCR%20Seguridad">
-        <small>Correo</small>
-        <strong>rcr.seguridad@gmail.com</strong>
-        <span>Para solicitudes con más detalle</span>
-      </a>
+    <div class="head" data-r><h2>Cuéntenos qué necesita y le respondemos directo</h2><p class="lead">Para cotizar guardias, asesorías o vigilancia con drones, escríbanos por WhatsApp o correo.</p></div>
+    <div class="chan" data-r>
+      <a href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer"><small>WhatsApp</small><strong>+56 9 5156 4828</strong><span>Respuesta más rápida</span></a>
+      <a href="#contacto" data-mail="rcr" data-subject="Solicitud de cotización - RCR Seguridad"><small>Correo</small><strong data-addr>Escribir un correo</strong><span>Para solicitudes con más detalle</span></a>
     </div>
   </div>
 </section>
@@ -331,86 +141,11 @@ html{scroll-behavior:auto}
   <div class="wrap">
     <p>© 2026 RCR Seguridad Privada SpA</p>
     <p class="legal">Empresa acreditada. Servicios regulados bajo el Decreto Ley N° 3.607, la Ley N° 21.659 y normativas asociadas.</p>
-    <a class="dev" href="mailto:kitsu.devworks@gmail.com?subject=Consulta%20por%20Servicios%20Web%20-%20RCR">
-      <span>Desarrollo tecnológico</span>
-      <img src="KitsuLogo2.png" alt="KitsuDevWorks" height="30">
-    </a>
+    <a class="dev" href="#inicio" data-mail="dev" data-subject="Consulta por Servicios Web - RCR"><span>Desarrollo tecnológico</span><img src="KitsuLogo2.png" alt="KitsuDevWorks" height="30"></a>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.1-1.1l-.3-.18-3.1.82.83-3.03-.2-.31a8.1 8.1 0 1 1 6.87 3.8Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.1 3.65.57.25 1.02.4 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
-</a>
-
-<script>
-(function () {
-  'use strict';
-  var d = document, root = d.documentElement;
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  root.classList.add('js');
-
-  /* Cabecera */
-  var header = d.getElementById('top');
-  var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* Menú móvil */
-  var burger = d.getElementById('burger'), panel = d.getElementById('panel');
-  function setMenu(open) {
-    panel.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-  }
-  burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
-  panel.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-  d.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setMenu(false); burger.focus(); } });
-
-  /* Revelado al hacer scroll */
-  var items = d.querySelectorAll('[data-r]');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
-    items.forEach(function (el) { io.observe(el); });
-  }
-
-  /* Carrusel operativo */
-  var slides = d.querySelectorAll('#shot img.s');
-  var dots = d.getElementById('dots'), cap = d.getElementById('cap');
-  if (slides.length) {
-    var cur = 0, timer = null, btns = [];
-    slides.forEach(function (_, i) {
-      var b = d.createElement('button');
-      b.type = 'button';
-      b.setAttribute('aria-label', 'Ver imagen ' + (i + 1) + ' de ' + slides.length);
-      b.addEventListener('click', function () { go(i); play(); });
-      dots.insertBefore(b, cap);
-      btns.push(b);
-    });
-    var go = function (n) {
-      slides[cur].classList.remove('on');
-      btns[cur].removeAttribute('aria-current');
-      cur = (n + slides.length) % slides.length;
-      slides[cur].classList.add('on');
-      btns[cur].setAttribute('aria-current', 'true');
-      cap.textContent = (cur + 1) + ' / ' + slides.length;
-    };
-    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
-    var play = function () {
-      stop();
-      if (!reduce) timer = setInterval(function () { go(cur + 1); }, 5000);
-    };
-    btns[0].setAttribute('aria-current', 'true');
-    cap.textContent = '1 / ' + slides.length;
-    play();
-    d.addEventListener('visibilitychange', function () { d.hidden ? stop() : play(); });
-  }
-})();
-</script>
+<a class="wa" href="https://wa.me/56951564828" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm0 18.1c-1.5 0-2.9-.4-4.1-1.1l-.3-.18-3.1.82.83-3.03-.2-.31a8.1 8.1 0 1 1 6.87 3.8Zm4.45-6.06c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.1 3.65.57.25 1.02.4 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg></a>
+<script src="main.js?v=19"></script>
 </body>
 </html>
