@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- RCR landing · build v18 · 2026-11-20 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-SFpYAIT+qAZAPeMk5CBigS+mUpGB4mmRqrAVrSMqtV4='; style-src 'sha256-HjlxoQlEwGEW+dSUuTETfc4hyHYRvd1BCgk6IL9bI38=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-SFpYAIT+qAZAPeMk5CBigS+mUpGB4mmRqrAVrSMqtV4='; style-src 'sha256-DsyMKGE87V41bfmoJvVyEGEqK8WLAXTX2QHqDTApiAg=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="RCR Seguridad Privada SpA: guardias acreditados para instalaciones y eventos, asesorías en seguridad y vigilancia con drones en la Región de Valparaíso.">
 <meta name="theme-color" content="#070709">
@@ -13,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#070709;--bg2:#0d0d12;--card:#121218;--line:#22222e;--gold:#b59458;--gold-l:#e5cb98;--gold-d:#8a6d35;--tx:#d4d4d8;--mut:#9a9aa6;--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.22,.61,.36,1)}
+:root{--bg:#070709;--bg2:#0d0d12;--card:#121218;--line:#22222e;--gold:#d1ab62;--gold-l:#f4deaa;--gold-d:#8a6d35;--tx:#d4d4d8;--mut:#9a9aa6;--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease:cubic-bezier(.22,.61,.36,1)}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
@@ -148,6 +149,29 @@ footer .legal{color:#71717a;font-size:.8rem;max-width:60ch;margin-inline:auto}
 .js [data-r].in{opacity:1;transform:none}
 .js [data-r="2"]{transition-delay:.1s}.js [data-r="3"]{transition-delay:.2s}
 
+
+/* v18: más brillo y contraste */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:720px;height:720px;right:-220px;top:-260px;background:radial-gradient(circle,rgba(209,171,98,.22),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-weight:600}
+.shot{border-color:var(--gold);box-shadow:14px 14px 0 var(--gold)}
+@media(max-width:520px){.shot{box-shadow:10px 10px 0 var(--gold);width:calc(100% - 10px);margin-left:0}}
+.btn-gold{position:relative;overflow:hidden}
+.btn-gold::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:rgba(255,255,255,.5);transform:skewX(-20deg);transition:left .7s var(--ease);pointer-events:none}
+.btn-gold:hover::after{left:130%}
+.svc li:hover h3{color:var(--gold-l)}
+.chan a:hover,.chan a:focus-visible{background:var(--gold)}
+.chan a:hover small,.chan a:hover strong,.chan a:hover span,.chan a:focus-visible small,.chan a:focus-visible strong,.chan a:focus-visible span{color:#0a0a0a}
+#empleo{background:var(--gold);border-bottom-color:var(--gold-d)}
+#empleo h2{color:#0a0a0c}
+#empleo .lead{color:#2a2110}
+#empleo .btn-gold{background:#0a0a0c;color:var(--gold-l);border-color:#0a0a0c}
+#empleo .btn-gold:hover{background:#000}
+#empleo .btn-gold::after{display:none}
+#empleo .btn-line{color:#0a0a0c;border-color:#0a0a0c}
+#empleo .btn-line:hover{background:rgba(0,0,0,.1)}
+#empleo :focus-visible{outline-color:#000}
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
 *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}
@@ -198,11 +222,11 @@ html{scroll-behavior:auto}
     </div>
     <div class="rise e">
       <div class="shot" id="shot" role="group" aria-roledescription="carrusel" aria-label="Personal operativo de RCR">
-        <img class="s on" src="foto1.png?v=17" alt="Personal operativo de RCR en despliegue" width="840" height="1050">
-        <img class="s" src="foto2.png?v=17" alt="Personal operativo de RCR en servicio" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto3.png?v=17" alt="Equipo de RCR en terreno" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto4.png?v=17" alt="Guardias de RCR en instalaciones" width="840" height="1050" loading="lazy">
-        <img class="s" src="foto5.png?v=17" alt="Operativo de RCR en evento" width="840" height="1050" loading="lazy">
+        <img class="s on" src="foto1.png?v=18" alt="Personal operativo de RCR en despliegue" width="840" height="1050">
+        <img class="s" src="foto2.png?v=18" alt="Personal operativo de RCR en servicio" width="840" height="1050" loading="lazy">
+        <img class="s" src="foto3.png?v=18" alt="Equipo de RCR en terreno" width="840" height="1050" loading="lazy">
+        <img class="s" src="foto4.png?v=18" alt="Guardias de RCR en instalaciones" width="840" height="1050" loading="lazy">
+        <img class="s" src="foto5.png?v=18" alt="Operativo de RCR en evento" width="840" height="1050" loading="lazy">
         <div class="dots" id="dots"><span id="cap">Despliegue RCR</span></div>
       </div>
     </div>
