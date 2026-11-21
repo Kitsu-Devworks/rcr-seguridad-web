@@ -9,8 +9,14 @@
   var P = { rcr: ['rcr.seguridad', 'gmail.com'], dev: ['kitsu.devworks', 'gmail.com'] };
   d.querySelectorAll('a[data-mail]').forEach(function (a) {
     var p = P[a.dataset.mail]; if (!p) return;
-    var ad = p.join('@');
-    a.href = 'mailto:' + ad + '?subject=' + encodeURIComponent(a.dataset.subject || '');
+    var ad = p.join('@'), sub = a.dataset.subject || '';
+    if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      /* En PC suele no haber programa de correo: abrimos Gmail web */
+      a.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(ad) + '&su=' + encodeURIComponent(sub);
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+    } else {
+      a.href = 'mailto:' + ad + '?subject=' + encodeURIComponent(sub);
+    }
     var o = a.querySelector('[data-addr]'); if (o) o.textContent = ad;
   });
 
@@ -31,7 +37,7 @@
   /* Videos: versión liviana en celular; el del dron solo corre a la vista */
   var pick = function (v) { return small && v.dataset.m ? v.dataset.m : v.dataset.src; };
   var hero = d.getElementById('vhero'), dron = d.getElementById('vdron');
-  if (!reduce) {
+  {
     if (hero) { hero.src = pick(hero); hero.play().catch(function () {}); }
     if (dron && 'IntersectionObserver' in window) {
       var loaded = false;
@@ -48,7 +54,7 @@
 
   /* Cinta de servicios */
   var tr = d.querySelector('.tr');
-  if (tr && !reduce) {
+  if (tr) {
     var c = tr.firstElementChild.cloneNode(true);
     c.setAttribute('aria-hidden', 'true');
     tr.appendChild(c); tr.classList.add('run');
@@ -77,7 +83,7 @@
       cap.textContent = (cur + 1) + ' / ' + slides.length;
     };
     var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
-    var play = function () { stop(); if (!reduce) timer = setInterval(function () { go(cur + 1); }, 3000); };
+    var play = function () { stop(); timer = setInterval(function () { go(cur + 1); }, 3000); };
     slides.forEach(function (_, i) {
       var b = d.createElement('button');
       b.type = 'button';
